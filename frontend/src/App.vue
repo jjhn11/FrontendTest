@@ -9,3 +9,11 @@ import { RouterView } from 'vue-router';
     <RouterView />
   </div>
 </template>
+
+<style>
+/* Component-specific styles can stay here */
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>

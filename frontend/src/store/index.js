@@ -2,32 +2,18 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    user: null
+    // Your application state here
   },
   getters: {
-    isLoggedIn: state => !!state.user
+    // Your getters here
   },
   mutations: {
-    setUser(state, user) {
-      state.user = user
-    }
+    // Your mutations here
   },
   actions: {
-    login({ commit }, credentials) {
-      // Here you would typically make an API call
-      // For now, we'll just simulate a successful login
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          const user = { username: credentials.username, role: 'user' }
-          commit('setUser', user)
-          resolve(user)
-        }, 1000)
-      })
-    },
-    logout({ commit }) {
-      commit('setUser', null)
-    }
+    // Your actions here
   },
   modules: {
+    // Your modules here
   }
 })

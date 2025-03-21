@@ -1,0 +1,49 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "titulo": "Configurar base de datos",
+      "completado": false
+    },
+    {
+      "id": "2",
+      "titulo": "Crear API en Express",
+      "completado": false
+    },
+    {
+      "id": "3",
+      "titulo": "Diseñar interfaz en Vue",
+      "completado": false
+    },
+    {
+      "id": "302",
+      "titulo": "tareita",
+      "completado": false
+    },
+    {
+      "id": "728",
+      "titulo": "tareita",
+      "completado": false
+    },
+    {
+      "id": "214",
+      "titulo": "hola",
+      "completado": false
+    },
+    {
+      "id": "418",
+      "titulo": "hola",
+      "completado": false
+    },
+    {
+      "id": "927",
+      "titulo": "prueba",
+      "completado": false
+    },
+    {
+      "id": 794,
+      "titulo": "eyeye",
+      "completado": false
+    }
+  ]
+}

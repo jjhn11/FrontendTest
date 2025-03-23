@@ -2,18 +2,18 @@
     <div>
         <!-- Hero Section -->
         <section class="hero-container">
-        <!-- Background GIF -->
-        <img src="../../img/herovideo.gif" alt="Hero animation" class="hero-background">
+            <!-- Background GIF -->
+            <img src="../../img/herovideo.gif" alt="Hero animation" class="hero-background">
 
-        <!-- Overlay Content -->
-        <div class="hero-overlay">
-            <img src="../../img/herovideo-title.png" alt="Hero title" class="hero-title">
-        </div>
+            <!-- Overlay Content -->
+            <div class="hero-overlay">
+                <img src="../../img/herovideo-title.png" alt="Hero title" class="hero-title">
+            </div>
 
-        <!-- SVG Curve -->
-        <svg class="hero-curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="white" fill-opacity="1" d="M0,160 C360,300 1080,300 1440,160 L1440,320 L0,320 Z"></path>
-        </svg>
+            <!-- SVG Curve -->
+            <svg class="hero-curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="white" fill-opacity="1" d="M0,160 C360,300 1080,300 1440,160 L1440,321 L0,321 Z"></path>
+            </svg>
         </section>
     </div>
 </template>
@@ -28,8 +28,6 @@
   height: 90vh;
   overflow: hidden;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
   background-color: white;
 }
 

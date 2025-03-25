@@ -77,7 +77,7 @@
                                 <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">TITULO</h5>
-                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
+                                    <p class="card-text">Texto de ejemplo, ahorita no  el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
                                     <a href="#" class="btn-read-more">Leer más...</a>
                                 </div>
                             </div>
@@ -127,6 +127,7 @@
 </template>
 
 <style>
+
 .carousel {
     position: relative;
     padding-bottom: 30px;

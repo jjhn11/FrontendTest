@@ -5,9 +5,7 @@ import Carrusel from '@/components/Carrusel.vue';
 </script>
 
 <template>
-    <div class="container-fluid">
-        <HeroVideo />
-        <SearchBar />
-        <Carrusel />
-    </div>
+    <HeroVideo />
+    <SearchBar />
+    <Carrusel />
 </template>

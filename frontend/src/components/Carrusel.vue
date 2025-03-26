@@ -4,7 +4,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row justify-content-center">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
                                 <div class="card-body">
@@ -14,7 +14,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
                                 <div class="card-body">
@@ -24,41 +24,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">TITULO</h5>
-                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">TITULO</h5>
-                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">TITULO</h5>
-                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
                                 <div class="card-body">
@@ -72,7 +38,41 @@
                 </div>
                 <div class="carousel-item">
                     <div class="row justify-content-center">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">TITULO</h5>
+                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
+                                    <a href="#" class="btn-read-more">Leer más...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">TITULO</h5>
+                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
+                                    <a href="#" class="btn-read-more">Leer más...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">TITULO</h5>
+                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
+                                    <a href="#" class="btn-read-more">Leer más...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
                                 <div class="card-body">
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
                                 <div class="card-body">
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
                                 <div class="card-body">

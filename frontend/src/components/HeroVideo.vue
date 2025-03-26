@@ -3,11 +3,11 @@
         <!-- Hero Section -->
         <section class="hero-container">
             <!-- Background GIF -->
-            <img src="../../img/herovideo.gif" alt="Hero animation" class="hero-background">
+            <img src="../assets/img/herovideo.gif" alt="Hero animation" class="hero-background">
 
             <!-- Overlay Content -->
             <div class="hero-overlay">
-                <img src="../../img/herovideo-title.png" alt="Hero title" class="hero-title">
+                <img src="../assets/img/herovideo-title.png" alt="Hero title" class="hero-title">
             </div>
 
             <!-- SVG Curve -->

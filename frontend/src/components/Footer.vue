@@ -6,10 +6,10 @@
                     <h1 class="footer-title">
                         ENLACES UTILES
                     </h1>
-                    <a href="" class="footer-text">INICIO</a>
-                    <a href="" class="footer-text">BIBLIOTECA</a>
-                    <a href="" class="footer-text">EVENTOS</a>
-                    <a href="" class="footer-text">COMUNIDAD</a>
+                    <a href="" class="footer-text text-link">INICIO</a>
+                    <a href="" class="footer-text text-link">BIBLIOTECA</a>
+                    <a href="" class="footer-text text-link">EVENTOS</a>
+                    <a href="" class="footer-text text-link">COMUNIDAD</a>
                 </div>
             </div>
             <div class="col-4">
@@ -49,5 +49,11 @@
 <style scoped>
 .text-justify {
     text-align: justify;
+}
+.text-link {
+    text-decoration: none;
+}
+.text-link:hover {
+    color: rgb(217, 217, 13);
 }
 </style>

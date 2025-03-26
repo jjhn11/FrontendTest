@@ -2,6 +2,7 @@
 @import 'bootstrap-custom';
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anek Odia');
+@import url('https://fonts.googleapis.com/css?family=Cinzel Decorative');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 
 html {
@@ -26,9 +27,10 @@ body {
 }
 
 .navbar {
+
+  background-color: $white;
   font-family: 'Anek Odia';
   font-weight: $font-weight-bold;
-  background-color: $light;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 

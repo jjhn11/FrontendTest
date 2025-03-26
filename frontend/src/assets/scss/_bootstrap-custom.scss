@@ -47,5 +47,10 @@ $font-size-base: 0.95rem;
 @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas";
 @import "bootstrap/scss/placeholders";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/helpers";
 
 // 5. Add additional custom code here
+// Import utilities API last to generate utility classes
+@import "bootstrap/scss/utilities/api";

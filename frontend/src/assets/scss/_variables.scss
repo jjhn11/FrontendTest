@@ -3,7 +3,8 @@ $primary: #2473c2;
 $secondary: #EA9B34;
 $dark: #343a40;
 $light: #f8f9fa;
-$background: #e9ecef;
+$background: white;
+$footer-bg: #F8F7F7;
 
 // Spacing
 $spacer: 1rem;
@@ -15,6 +16,11 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-size-base: 1rem;
 $line-height-base: 1.5;
+
+$font-footer-titles: 'Playfair Display';
+$font-footer-titles-color: #000E32;
+$font-footer-text: 'Nunito Sans';
+$font-footer-text-color: #0047FF;
 
 // Border radius
 $border-radius: 8px;

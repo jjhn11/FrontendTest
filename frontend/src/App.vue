@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from './components/Navbar.vue';
+import Foot from './components/Footer.vue';
 import Carrusel from './components/Carrusel.vue';
 import { RouterView } from 'vue-router';
 </script>
@@ -9,7 +10,7 @@ import { RouterView } from 'vue-router';
     <Navbar />
     <Carrusel />
     <RouterView />
-
+    <Foot />
   </div>
 </template>
 

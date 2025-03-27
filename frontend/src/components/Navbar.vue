@@ -96,5 +96,4 @@
     </nav>
 
   </div>
-
 </template>

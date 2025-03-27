@@ -98,34 +98,3 @@
   </div>
 
 </template>
-
-<style>
-
-#nav li > a {
-  font-family: 'Anek Odia';
-  font-weight: 600;
-  height: 40px;
-  color: #000E32;
-  background-color: #FFFAE9;
-}
-
-#nav li > a:hover {
-    transition: 0.4s;
-    color: white;
-    background-color: #000E32;
-    border-radius: 5px;
-}
-
-#aurlog span {
-  font-family: 'Cinzel Decorative';
-  font-weight: 600;
-  color: #000E32;
-  opacity: 0;
-  transition: 0.5s ;
-}
-
-#aurlog span:hover {
-  opacity: 1;
-}
-
-</style>

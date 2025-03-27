@@ -1,9 +1,12 @@
 @import 'variables';
 @import 'bootstrap-custom';
+@import 'navbar';
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anek Odia');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cinzel Decorative');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -13,35 +16,19 @@ body {
   font-family: $font-family-sans-serif;
   font-weight: $font-weight-bold;
   background-color: $background;
-  padding-top: 55px; /* Adjust is to match your navbar height */
+  padding-top: 80px; /* Adjust is to match your navbar height */
   position: relative;
   overflow-x: hidden;
 }
 
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-.navbar {
-
-  background-color: $white;
-  font-family: 'Anek Odia';
-  font-weight: $font-weight-bold;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 .footer {
   background-color: $footer-bg;
-  padding: 2rem;
+  padding: 40px 0 30px 0;
 }
 
 .footer-title {
   font-family: $font-footer-titles;
-  font-size: 2.4rem;
+  font-size: 21.375px;
   color: $font-footer-titles-color;
   font-weight: $font-weight-bold;
   padding-bottom: 0.7rem;
@@ -49,7 +36,7 @@ body {
 
 .footer-text {
   font-family: $font-footer-text;
-  font-size: 1.2rem;
+  font-size: 13.5px;
   color: $font-footer-text-color;
   font-weight: $font-weight-bold;
 }

@@ -1,25 +1,39 @@
 <template>
-    <div>
-        <!-- Hero Section -->
-        <section class="hero-container">
-            <!-- Background GIF -->
-            <img src="../assets/img/herovideo.gif" alt="Hero animation" class="hero-background">
+  <div>
+    <section class="hero-container">
+      <!-- Always show the GIF as fallback -->
+      <img 
+        src="../assets/img/herovideo.gif" 
+        alt="Hero animation" 
+        class="hero-background"
+      >
+      
+      <!-- Simple video implementation -->
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        class="hero-video"
+      >
+        <source src="../assets/img/herovideo.mp4" type="video/mp4">
+      </video>
 
-            <!-- Overlay Content -->
-            <div class="hero-overlay">
-                <img src="../assets/img/herovideo-title.png" alt="Hero title" class="hero-title">
-            </div>
+      <!-- Overlay Content -->
+      <div class="hero-overlay">
+        <!-- <span class="hero-title">Aurora</span> -->
+        <img src="../assets/img/herovideo-title.png" alt="Hero title" class="hero-title">
+      </div>
 
-            <!-- SVG Curve -->
-            <svg class="hero-curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="white" fill-opacity="1" d="M0,160 C360,300 1080,300 1440,160 L1440,321 L0,321 Z"></path>
-            </svg>
-        </section>
-    </div>
+      <!-- SVG Curve -->
+      <svg class="hero-curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="white" fill-opacity="1" d="M0,160 C360,300 1080,300 1440,160 L1440,321 L0,321 Z"></path>
+      </svg>
+    </section>
+  </div>
 </template>
   
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+<style>
 
 /* Hero Container */
 .hero-container {
@@ -40,21 +54,27 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.66) 70%);
-  z-index: 1;
+  z-index: 2;
   pointer-events: none; /* Ensures the overlay doesn't block interactions */
 }
 
-/* Background GIF */
-.hero-background {
+/* Background elements */
+.hero-background, .hero-video {
   position: absolute;
   top: 0;
-  left: 0;
   left: -10%;
   width: 130%;
   height: 113%;
-  object-fit: cover; /* Ensures the GIF covers the entire section */
-  object-position: 100% 95%; /* 80% from the left, 100% from the top */
+  object-fit: cover;
+  object-position: 100% 95%;
+}
+
+.hero-background {
   z-index: 0;
+}
+
+.hero-video {
+  z-index: 1;
 }
 
 /* Overlay Content */
@@ -76,16 +96,28 @@
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 3;
+  z-index: 4;
 }
+
+/* .hero-title {
+  font-family: 'Cinzel Decorative';
+  font-weight: 700;
+  font-size: 5rem;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  transform: translateY(30%);
+  letter-spacing: 0.05em;
+}
+*/
+
 
 .hero-title {
   width: 75%;
-  position: relative;
-  max-width: 80%; /* Adjust size if needed */
+  max-width: 80%; 
   margin: 0 auto;
-  transform: translate(20%, 130%); /* Moves the title slightly downwards */
-  /* transform: translateY(100%); Moves the title slightly upwards */
-}
+  transform: translate(20%, 130%); 
+} 
+
 
 </style>

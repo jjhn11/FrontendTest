@@ -1,70 +1,47 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+</style>
 <template>
-    <div class="container d-flex justify-content-center">
+    <div class="container-fluid d-flex justify-content-center">
         <div id="carrusel1" class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row justify-content-center">
                         <div class="col-md-4">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
+                            <div id="Ele1" class="card">
+                                <img src="\src\assets\img\noticia 1.png" class="card-img-top">
                                 <div class="card-body">
-                                    <h5 class="card-title">TITULO</h5>
-                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
+                                    <h5 class="card-title">ENTREGAN ESTÍMULO A PERSONAL ADMINISTRATIVO</h5>
+                                    <p class="card-text">El director, Dr. Manuel de Jesús López Pérez, entregó el Estímulo de 10 días en virtud del desempeño de los Servidores Públicos de nivel operativo 2024. En un sencillo acto celebrado en la sala de juntas de la dirección...</p>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn-read-more">Leer más...</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
+                            <div id="Ele1" class="card">
+                                <img src="\src\assets\img\noticia 2.png" class="card-img-top">
+
                                 <div class="card-body">
-                                    <h5 class="card-title">TITULO</h5>
-                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
+                                    <h5 class="card-title">LA ESCOLTA Y BANDA DE GUERRA RECIBE APOYO PARA ENCUENTRO NACIONAL</h5>
+                                    <p class="card-text">La Escolta y Banda de Guerra recibió cornetas y un portabandera para su participación en el Encuentro Nacional de Escoltas y Bandas de Guerra del TecNM. El subdirector de Planeación</p>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn-read-more">Leer más...</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
+                            <div id="Ele1" class="card">
+                                <img src="\src\assets\img\noticia 5.png" class="card-img-top">
                                 <div class="card-body">
-                                    <h5 class="card-title">TITULO</h5>
-                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">TITULO</h5>
-                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">TITULO</h5>
-                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">TITULO</h5>
-                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
+                                    <h5 class="card-title">CELEBRAN HONORES A LA BANDERA NACIONAL</h5>
+                                    <p class="card-text">Estudiantes, personal docente y cuerpo directivo, encabezado por el subdirector, Gabriel Ernesto Pando Martínez, en representación del director, Dr. Manuel de Jesús López Pérez, rindieron honores a la Bandera Nacional...</p>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn-read-more">Leer más...</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -73,32 +50,76 @@
                 <div class="carousel-item">
                     <div class="row justify-content-center">
                         <div class="col-md-4">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
+                            <div id="Ele1" class="card">
+                                <img src="\src\assets\img/noticiaa 4.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">TITULO</h5>
+                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn-read-more">Leer más...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="Ele1" class="card">
+                                <img src="\src\assets\img/noticia 3.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">TITULO</h5>
+                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn-read-more">Leer más...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="Ele1" class="card">
+                                <img src="\src\assets\img/noticia 1.png" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">TITULO</h5>
+                                    <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn-read-more">Leer más...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div id="Ele1" class="card">
+                                <img src="\src\assets\img/noticia 3.png" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">TITULO</h5>
                                     <p class="card-text">Texto de ejemplo, ahorita no  el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn-read-more">Leer más...</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
+                            <div id="Ele1" class="card">
+                                <img src="\src\assets\img/noticia 5.png" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">TITULO</h5>
                                     <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <a href="#" class="btn-read-more">Leer más...</a>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn-read-more">Leer más...</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card">
-                                <img src="https://www.mexicoenmicocina.com/wp-content/uploads/2021/12/Migas-con-huevo-receta-500x500.jpg" class="card-img-top">
+                            <div id="Ele1" class="card">
+                                <img src="\src\assets\img/noticiaa 4.png" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">TITULO</h5>
                                     <p class="card-text">Texto de ejemplo, ahorita no tengo el lorem ipsum a la mano pero supongo que por el momento podria poner otro texto al azaar</p>
-                                    <div class="card-footer-custom">
+                                    <div class="card-footer">
                                         <a href="#" class="btn-read-more">Leer más...</a>
                                     </div>
                                 </div>
@@ -139,18 +160,26 @@
 
 .carousel-item .row {
     flex-wrap: nowrap;
-    max-width: 1200px;
+    max-width: 1600px;
     justify-content: center;
-    margin: 0 auto;
+    margin: 15 auto;
 }
 /* cards */
-.card {
-    width: 270px;
-    border-color: #0056b3;
-    border-radius: 20px;
+.freeman-regular {
+  font-family: "Freeman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#Ele1 {
+    background-color: #F3F4F5;
+    width: 436px;
+    height: 420px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-out;
     flex: 0 0 auto;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .card:hover {
@@ -158,20 +187,36 @@
 }
 
 .card-img-top {
-    height: 150px;
+    height: 191px;
+    width: 436px;
+    object-position: center top;
     object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
-
 .card-title {
-    font-weight: bold;
+    font-family:'Freeman';
+    font-weight:400;
+    line-height: 100%;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 23px;
     color: #1a1a1a;
 }
 
+.card-footer{
+    width: 100%;
+    padding: 14px;
+    background-color: #D9D9D9;
+    text-align: end;
+    text-align: right;
+    margin: 0;
+}
+
 .card-text {
-    font-size: 14px;
-    color: #555;
+    font-family: 'Inria sans';
+    font-weight: 400;
+    font-size: 15px;
+    color: #7e8382;
 }
 
 .btn-read-more {
@@ -225,7 +270,7 @@
     height: 12px !important;
     border-radius: 50%;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #6f00ff !important;
     opacity: 0.5;
     transition: all 0.3s ease;
     margin: 0 5px;
@@ -240,4 +285,5 @@
 .carousel-control-next {
     display: none;
 }
+
 </style>

@@ -2,7 +2,6 @@
 import HeroVideo from '@/components/HeroVideo.vue';
 import SearchBar from '@/components/SearchBar.vue';
 import Carrusel from '@/components/Carrusel.vue';
-import CarruselE from '@/components/CarruselEventos.vue';
 import Title from '@/components/Title.vue';
 import CarruselEventos from '@/components/CarruselEventos.vue';
 </script>

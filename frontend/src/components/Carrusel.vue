@@ -23,6 +23,7 @@
                         <div class="col-md-4">
                             <div id="Ele1" class="card">
                                 <img src="\src\assets\img\noticia 2.png" class="card-img-top">
+
                                 <div class="card-body">
                                     <h5 class="card-title">LA ESCOLTA Y BANDA DE GUERRA RECIBE APOYO PARA ENCUENTRO NACIONAL</h5>
                                     <p class="card-text">La Escolta y Banda de Guerra recibió cornetas y un portabandera para su participación en el Encuentro Nacional de Escoltas y Bandas de Guerra del TecNM. El subdirector de Planeación</p>

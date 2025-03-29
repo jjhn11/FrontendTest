@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from './components/Navbar.vue';
+import HeroVideo from './components/HeroVideo.vue';
 import Foot from './components/Footer.vue';
 import Carrusel from './components/Carrusel.vue';
 import { RouterView } from 'vue-router';
@@ -8,7 +9,6 @@ import { RouterView } from 'vue-router';
 <template>
   <div id="app">
     <Navbar />
-    <Carrusel />
     <RouterView />
     <Foot />
   </div>

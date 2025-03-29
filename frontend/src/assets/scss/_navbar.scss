@@ -1,41 +1,123 @@
-  .fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-  }
-  
-.navbar {
-    background-color: $white;
-    font-family: 'Anek Odia';
-    font-weight: $font-weight-bold;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
-  
-#nav li > a {
-    font-family: 'Anek Odia';
+
+.navbar {
+  background-color: $white;
+  font-family: 'Anek Odia';
+  font-weight: $font-weight-bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ### Navbar row 1 (Up) ### */
+
+
+/* ### Navbar row 2 (Down) ### */
+
+  // Logo y Nombre
+
+  #aurlog.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    left: 17px;
+    bottom: 17px;
+    margin-bottom: -15px;
+  }
+
+  #aurlog span {
+    position: relative;
+    bottom: 2px;
+    font-family: 'Cinzel Decorative';
+    font-size: 17px;
     font-weight: 600;
+    color: #000E32;
+    opacity: 0;
+    transition: 0.5s;
+    
+  }
+
+  #log:hover + #aur {
+    opacity: 1;
+  }
+
+  // Botones
+  
+  #nav li > a {
+    transition: 0.4s;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    font-weight: 700;
     height: 40px;
     color: #000E32;
     background-color: white;
   }
-  
+
   #nav li > a:hover {
-      transition: 0.4s;
-      color: white;
-      background-color: #000E32;
-      border-radius: 5px;
+    color: white;
+    background-color: #000E32;
+    border-radius: 5px;
   }
   
-  #aurlog span {
-    font-family: 'Cinzel Decorative';
-    font-weight: 600;
-    color: #000E32;
-    opacity: 0;
-    transition: 0.5s ;
-  }
+
+  // Dropdowns
+
+  @media (min-width: 576px) {
   
-  #aurlog span:hover {
-    opacity: 1;
+    .dropdown .dropdown-menu {
+      width: 75% !important;
+      height: 280px;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      right: auto !important;
+      text-align: center; /* Para centrar el texto si lo deseas */
+      min-width: 200px; /* Ancho mínimo */
+      display: none;
+      margin-top: 10;
+      opacity: 0;
+      transition: all 0.6s;
+    }
+
+    #droph.dropdown:hover .dropdown-menu {
+      width: 75% !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      right: auto !important;
+      text-align: center; /* Para centrar el texto si lo deseas */
+      min-width: 200px; /* Ancho mínimo */
+      display: block;
+      margin-top: 10;
+      opacity: 1;
+    }
+
+  }
+
+  #dropimg.dropdown-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+  }
+
+  // Cuenta
+
+  #user.btn{
+    display: flex;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 80px;
+
+    i {
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+    }
   }

@@ -76,9 +76,11 @@
                 <!-- Add your navigation links here -->
               </ul>
 
-              <button type="button" class="btn btn-primary mx-2 ms-auto mt-3"> 
-                <span class="fw-bold">Iniciar Sesion</span> 
-              </button>
+              <RouterLink to="/user">
+                <button type="button" class="btn btn-primary mx-2 ms-auto mt-3"> 
+                  <span class="fw-bold">Iniciar Sesion</span> 
+                </button>
+              </RouterLink>
               
               <button type="button" class="btn btn-outline-primary mt-3"> 
                 <span class="fw-bold">Registrarse</span> 

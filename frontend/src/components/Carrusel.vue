@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 </style>
 <template>
-    <div class="container-fluid d-flex justify-content-center">
+    <div class="contenedor-carrusel container-fluid d-flex justify-content-center">
         <div id="carrusel1" class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -149,6 +149,10 @@
 
 <style>
 
+.contenedor-carrusel {
+    width: 83%;
+}
+
 .carousel {
     position: relative;
     padding-bottom: 30px;
@@ -173,8 +177,8 @@
 
 #Ele1 {
     background-color: #F3F4F5;
-    width: 436px;
-    height: 420px;
+    /* width: 436px; */
+    /* height: 420px; */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -190,7 +194,7 @@
 
 .card-img-top {
     height: 191px;
-    width: 436px;
+    /* width: 436px; */
     object-position: center top;
     object-fit: cover;
     border-top-left-radius: 20px;

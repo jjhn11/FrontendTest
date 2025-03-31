@@ -158,7 +158,6 @@
                   <ul class="dropdown-menu">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                       <div class="row w-100 justify-content-center px-0">
-
                         <div class="col-12 col-md-4 py-4">
 
                           <li><RouterLink to="/" class="dropdown-item" id="dropimg">

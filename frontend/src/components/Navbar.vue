@@ -17,6 +17,7 @@
     const route = useRoute();
     return route.path === routePath;
   }
+
 </script>
 
 <template>
@@ -24,7 +25,7 @@
   <div class="container-fluid mt-5" id="contnav">
     
     
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       
 
       <div class="col-12 mt-2">
@@ -33,7 +34,7 @@
           
           <!-- CONTAINER EDU -->
 
-          <div class="d-flex justify-content-center mb-1" id="edu">
+          <div class="container-fluid p-1 d-flex justify-content-center mb-1" id="edu">
 
             <header>
               <img :src="tec" width="525" height="70">
@@ -57,21 +58,21 @@
                   <span id="aur">AURORA</span>
               </a>
 
-              <ul class="navbar-nav ms-auto border-top border-black border-2 me-auto d-flex" id="navdown">
+              <ul class="navbar-nav ms-auto border-top border-black border-2 me-auto d-flex" id="nav">
 
-                <li class="nav-item pe-5 mt-3 ms-3 me-5">
-                  <RouterLink to="/" class="nav-link">
+                <li class="nav-item pe-5 mt-4 ms-3 me-5">
+                  <RouterLink to="/" class="nav-link" id="bot">
                     INICIO
                   </RouterLink>
                 </li>
 
-                <li class="nav-item dropdown position-static pe-5 mt-3 ms-5 me-4" id="droph">
-                  <RouterLink to="/" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown position-static pe-5 mt-4 ms-5 me-4" id="droph">
+                  <RouterLink to="/" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="bot">
                     BIBLIOTECA
                   </RouterLink>
 
                   <ul class="dropdown-menu">
-                    <div class="container-fluid">
+                    <div class="container-fluid d-flex justify-content-center align-items-center">
                       <div class="row w-100 justify-content-center px-0">
 
                         <div class="col-12 col-md-4 py-4">
@@ -83,7 +84,7 @@
 
                         </div>
 
-                        <div class="col-12 col-md-4 py-4 d-flex justify-content-center">
+                        <div class="col-12 col-md-4 py-4">
 
                           <li><RouterLink to="/" class="dropdown-item" id="dropimg">
                             <img :src="B2R" width="300" height="175" id="log">
@@ -107,13 +108,13 @@
 
                 </li>
 
-                <li class="nav-item dropdown position-static  pe-5 mt-3 ms-5 me-4" id="droph">
-                  <RouterLink to="/" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown position-static pe-5 mt-4 ms-5 me-4" id="droph">
+                  <RouterLink to="/" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="bot">
                     EVENTOS
                   </RouterLink>
                   
                   <ul class="dropdown-menu">
-                    <div class="container-fluid">
+                    <div class="container-fluid d-flex justify-content-center align-items-center">
                       <div class="row w-100 justify-content-center px-0">
 
                         <div class="col-12 col-md-4 py-4">
@@ -149,13 +150,13 @@
 
                 </li>
 
-                <li class="nav-item dropdown position-static mt-3 ms-5 me-2" id="droph">
-                  <RouterLink to="/" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown position-static mt-4 ms-5 me-2" id="droph">
+                  <RouterLink to="/" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="bot">
                     COMUNIDAD
                   </RouterLink>
 
                   <ul class="dropdown-menu">
-                    <div class="container-fluid">
+                    <div class="container-fluid d-flex justify-content-center align-items-center">
                       <div class="row w-100 justify-content-center px-0">
 
                         <div class="col-12 col-md-4 py-4">
@@ -190,16 +191,13 @@
                   </ul>
                   
                 </li>
-                
               </ul>
-
-              <button type="button" class="btn btn-white mx-5 mt-3 ms-auto me-5 justify-content-center" id="user"> 
+              
+              <RouterLink to="/" type="button" class="btn btn-white mx-5 mt-3 ms-auto me-5 justify-content-center" id="user"> 
                 <i class="bi bi-person-circle"></i>
-              </button>
-            
-
+              </RouterLink>
+              
             </div>
-            
 
           </div>
     
@@ -210,4 +208,5 @@
     </nav>
 
   </div>
+  
 </template>

@@ -42,13 +42,13 @@
           <div id="Ele2" class="card w-60 p-3">
             <div class="row">
               <div class="col-md-4">
-                <img src="/src/assets/img/noticia 1.png" class="img-fluid rounded" alt="Noticia 1">
+                <img src="\src\assets\img\videojuegoslibros.png" class="img-fluid rounded" alt="videojuegos libro x">
               </div>
               <div class="col-md-8">
-                <h5 class="book-title">Código Limpio</h5>
-                <p class="text-primary author">Robert Cecil Martín</p>
+                <h5 class="book-title">Desarrollo de Videojuegos Para web en Javascript</h5>
+                <p class="text-primary author">Jordán Pascual Espada</p>
                 <div class="row">
-                  <p class="review-author">Joan Daniel Alvarez Ruiz</p>
+                  <p class="review-author">José Andrés Veliz Sierra</p>
                   <div class="rating">
                     <span class="star filled">★</span>
                     <span class="star filled">★</span>
@@ -57,7 +57,7 @@
                     <span class="star">★</span>
                   </div>
                 </div>
-                <p class="review">Buen libro para aprender/recordar conceptos de escritura y creación de software.</p>
+                <p class="review">Muy buen libro. La verdad que te hace reflexionar mucho como desarrollador por como uno escribe el código.</p>
               </div>
             </div>
           </div>
@@ -68,13 +68,13 @@
           <div id="Ele2" class="card w-60 p-3">
             <div class="row">
               <div class="col-md-4">
-                <img src="/src/assets/img/noticia 1.png" class="img-fluid rounded" alt="Noticia 1">
+                <img src="\src\assets\img\libro3.png" class="img-fluid rounded" alt="Noticia 1">
               </div>
               <div class="col-md-8">
-                <h5 class="book-title">Código Limpio</h5>
-                <p class="text-primary author">Robert Cecil Martín</p>
+                <h5 class="book-title">Fundamentos de Programación</h5>
+                <p class="text-primary author">Luis Joyanes Aguilar</p>
                 <div class="row">
-                  <p class="review-author">Joan Daniel Alvarez Ruiz</p>
+                  <p class="review-author">Tomás Sucedo Navarrete</p>
                   <div class="rating">
                     <span class="star filled">★</span>
                     <span class="star filled">★</span>
@@ -83,7 +83,7 @@
                     <span class="star">★</span>
                   </div>
                 </div>
-                <p class="review">Buen libro para aprender/recordar conceptos de escritura y creación de software.</p>
+                <p class="review">Una verdadera obra maestra del mundo de la programación, dedicada a profesionales y estudiantes.</p>
               </div>
             </div>
           </div>
@@ -103,28 +103,50 @@
 </template>
 <style>
   .review-author {
-    text-align:right;
+    font-size: 22px;
+    position: absolute;
+    height: 30px;
+    width: 290px;
+    top: 145px;
+    left: 243px;
   }
   .review {
     text-align: justify;
+    position: absolute;
+    width: 386px;
+    height: 50px;
+    top: 182px;
+    left: 253px;
+    font-style: italic;
+    font-size: 18px;
+    color: #264653;
+  }
+  .rating {
+    position: absolute;
+    width: 111px;
+    height: 20px;
+    right: 80px;
+    top: 145px;
   }
   .book-title {
     font-weight: 700;
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
     font-size: 30px;
     font-family: "Crimson text";
   }
-  .text-primary .author {
+  .text-primary{
     font-size: 20px;
+    line-height: 100%;
+    color: #0047FF;
     font-weight: 700;
     font-family: 'Nunito sans';
+    text-align: right;
   }
   .star {
     color: #caed07;
     font-size: 1.2rem;
-  }
-  
-  .text-primary {
-    text-align: right;
   }
   
   .book-title {
@@ -133,7 +155,9 @@
   
   /* Estilo de las tarjetas */
   #Ele2 {
-    width: 800px;
+    width: 725.36px;
+    height: 330px;
+    border-radius: 30px;
     background-color: #ccc;
   }
   
@@ -152,40 +176,6 @@
     max-width: 1600px;
     justify-content: center;
     margin: 15 auto;
-  }
-  
-  /* Tipografía personalizada */
-  .freeman-regular {
-    font-family: "Freeman", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  /* Estilo de imágenes */
-  .card-img-top {
-    height: 191px;
-    width: 436px;
-    object-position: center top;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  
-  .card-title {
-    font-family: "Freeman";
-    font-weight: 400;
-    line-height: 100%;
-    text-transform: uppercase;
-    font-size: 23px;
-    color: #1a1a1a;
-  }
-  
-  .card-footer {
-    width: 100%;
-    padding: 14px;
-    background-color: #D9D9D9;
-    text-align: right;
-    margin: 0;
   }
   
   .card-text {

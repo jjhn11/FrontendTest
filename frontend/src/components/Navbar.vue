@@ -192,7 +192,7 @@
                 </li>
               </ul>
               
-              <RouterLink to="/" type="button" class="btn btn-white mx-5 mt-3 ms-auto me-5 justify-content-center" id="user"> 
+              <RouterLink to="/user" type="button" class="btn btn-white mx-5 mt-3 ms-auto me-5 justify-content-center" id="user"> 
                 <i class="bi bi-person-circle"></i>
               </RouterLink>
               

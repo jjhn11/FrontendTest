@@ -16,7 +16,7 @@
           <div id="Ele2" class="card p-3">
             <div class="row">
               <div class="col-md-4">
-                <img src="/src/assets/img/codigoLimpio.png" class="img-fluid rounded" alt="Código Limpio">
+                <img src="/src/assets/img/home/codigoLimpio.png" class="img-fluid rounded" alt="Código Limpio">
               </div>
               <div class="col-md-8">
                 <h5 class="book-title">Código Limpio</h5>
@@ -42,7 +42,7 @@
           <div id="Ele2" class="card w-60 p-3">
             <div class="row">
               <div class="col-md-4">
-                <img src="\src\assets\img\videojuegoslibros.png" class="img-fluid rounded" alt="videojuegos libro x">
+                <img src="/src/assets/img/home/videojuegoslibros.png" class="img-fluid rounded" alt="videojuegos libro x">
               </div>
               <div class="col-md-8">
                 <h5 class="book-title">Desarrollo de Videojuegos Para web en Javascript</h5>
@@ -68,7 +68,7 @@
           <div id="Ele2" class="card w-60 p-3">
             <div class="row">
               <div class="col-md-4">
-                <img src="\src\assets\img\libro3.png" class="img-fluid rounded" alt="Noticia 1">
+                <img src="/src/assets/img/home/libro3.png" class="img-fluid rounded" alt="Noticia 1">
               </div>
               <div class="col-md-8">
                 <h5 class="book-title">Fundamentos de Programación</h5>

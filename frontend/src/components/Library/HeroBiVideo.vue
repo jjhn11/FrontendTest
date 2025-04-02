@@ -6,7 +6,7 @@
       <section class="hero-container">
         <!-- Always show the GIF as fallback -->
         <img 
-          src="../assets/img/bibliotecagif.gif" 
+          src="@/assets/img/library/bibliotecagif.gif" 
           alt="Hero animation" 
           class="hero-background"
         >

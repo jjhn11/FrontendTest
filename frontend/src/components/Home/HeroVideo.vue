@@ -3,7 +3,7 @@
     <section class="hero-container">
       <!-- Always show the GIF as fallback -->
       <img 
-        src="/src/assets/img/herovideo.gif" 
+        src="@/assets/img/home/herovideo.gif" 
         alt="Hero animation" 
         class="hero-background"
       >
@@ -16,13 +16,13 @@
         playsinline
         class="hero-video"
       >
-        <source src="/src/assets/img/herovideo.mp4" type="video/mp4">
+        <source src="@/assets/img/home/herovideo.mp4" type="video/mp4">
       </video>
 
       <!-- Overlay Content -->
       <div class="hero-overlay">
         <!-- <span class="hero-title">Aurora</span> -->
-        <img src="/src/assets/img/herovideo-title.png" alt="Hero title" class="hero-title">
+        <img src="@/assets/img/home/herovideo-title.png" alt="Hero title" class="hero-title">
       </div>
 
       <!-- SVG Curve -->

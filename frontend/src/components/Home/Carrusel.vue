@@ -1,7 +1,16 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-</style>
+<script setup>
+// Import all images directly
+import noticia1 from '@/assets/img/home/noticia 1.png';
+import noticia2 from '@/assets/img/home/noticia 2.png';
+import noticia5 from '@/assets/img/home/noticia 5.png';
+import noticia4 from '@/assets/img/home/noticiaa 4.png';
+import noticia3 from '@/assets/img/home/noticia 3.png';
+import noti6 from '@/assets/img/home/noti6.jpg';
+import noti7 from '@/assets/img/home/noti7.jpg';
+import noti8 from '@/assets/img/home/noti8.jpg';
+import noti9 from '@/assets/img/home/noti9.jpg';
+</script>
+
 <template>
     <div class="contenedor-carrusel container-fluid d-flex justify-content-center">
         <div id="carrusel1" class="carousel">
@@ -10,7 +19,7 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4">
                             <div id="Ele1" class="card">
-                                <img src="\src\assets\img\noticia 1.png" class="card-img-top">
+                                <img :src="noticia1" class="card-img-top" alt="Noticia 1">
                                 <div class="card-body">
                                     <h5 class="card-title">ENTREGAN ESTÍMULO A PERSONAL ADMINISTRATIVO</h5>
                                     <p class="card-text">El director, Dr. Manuel de Jesús López Pérez, entregó el Estímulo de 10 días en virtud del desempeño de los Servidores Públicos de nivel operativo 2024. En un sencillo acto celebrado en la sala de juntas de la dirección...</p>
@@ -22,8 +31,7 @@
                         </div>
                         <div class="col-md-4">
                             <div id="Ele1" class="card">
-                                <img src="\src\assets\img\noticia 2.png" class="card-img-top">
-
+                                <img :src="noticia2" class="card-img-top" alt="Noticia 2">
                                 <div class="card-body">
                                     <h5 class="card-title">LA ESCOLTA Y BANDA DE GUERRA RECIBE APOYO PARA ENCUENTRO NACIONAL</h5>
                                     <p class="card-text">La Escolta y Banda de Guerra recibió cornetas y un portabandera para su participación en el Encuentro Nacional de Escoltas y Bandas de Guerra del TecNM. El subdirector de Planeación</p>
@@ -35,7 +43,7 @@
                         </div>
                         <div class="col-md-4">
                             <div id="Ele1" class="card">
-                                <img src="\src\assets\img\noticia 5.png" class="card-img-top">
+                                <img :src="noticia5" class="card-img-top" alt="Noticia 5">
                                 <div class="card-body">
                                     <h5 class="card-title">CELEBRAN HONORES A LA BANDERA NACIONAL</h5>
                                     <p class="card-text">Estudiantes, personal docente y cuerpo directivo, encabezado por el subdirector, Gabriel Ernesto Pando Martínez, en representación del director, Dr. Manuel de Jesús López Pérez, rindieron honores a la Bandera Nacional...</p>
@@ -51,7 +59,7 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4">
                             <div id="Ele1" class="card">
-                                <img src="\src\assets\img/noticiaa 4.png" class="card-img-top">
+                                <img :src="noticia4" class="card-img-top" alt="Noticia 4">
                                 <div class="card-body">
                                     <h5 class="card-title">DOCENTES SE GRADUAN EN PROGRAMA DE FORMACIÓN DE SEMICONDUCTORES</h5>
                                     <p class="card-text">Los docentes Iván Yeniseysk Alba Corpus, Margarita Ayala Figueroa y Rafael Iván Ayala Figueroa, se graduaron en el programa de Formación de Semiconductores. En el cierre del segundo Foro de Semiconductores recibieron el certificado...</p>
@@ -63,10 +71,10 @@
                         </div>
                         <div class="col-md-4">
                             <div id="Ele1" class="card">
-                                <img src="\src\assets\img/noticia 3.png" class="card-img-top">
+                                <img :src="noticia3" class="card-img-top" alt="Noticia 3">
                                 <div class="card-body">
                                     <h5 class="card-title">NOMBRA DIRECTOR GENERAL DEL TECNM A NUEVOS SUBDIRECTORES Y JEFES DE DEPARTAMENTO DEL ITM.</h5>
-                                    <p class="card-text">En una reunión celebrada en el audiovisual del edificio “D”, el director del Instituto Tecnológico de Mexicali, Manuel de Jesús López Pérez, dio la bienvenida y entregó...</p>
+                                    <p class="card-text">En una reunión celebrada en el audiovisual del edificio "D", el director del Instituto Tecnológico de Mexicali, Manuel de Jesús López Pérez, dio la bienvenida y entregó...</p>
                                 </div>
                                 <div class="card-footer">
                                     <a href="#" class="btn-read-more">Leer más...</a>
@@ -75,7 +83,7 @@
                         </div>
                         <div class="col-md-4">
                             <div id="Ele1" class="card">
-                                <img src="\src\assets\img\noti6.jpg" class="card-img-top">
+                                <img :src="noti6" class="card-img-top" alt="Noticia 6">
                                 <div class="card-body">
                                     <h5 class="card-title">El Tecnológico Nacional de México (TecNM) conmemoró su 75 aniversario</h5>
                                     <p class="card-text">El Dr. Manuel de Jesús López Pérez, director del Instituto Tecnológico de Mexicali, asistió al citado evento, y se sumó al llamado del Profesor Ramón Jiménez López./ Director General de TecNM para refrendar el compromiso del...</p>
@@ -91,7 +99,7 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4">
                             <div id="Ele1" class="card">
-                                <img src="\src\assets\img\noti7.jpg" class="card-img-top">
+                                <img :src="noti7" class="card-img-top" alt="Noticia 7">
                                 <div class="card-body">
                                     <h5 class="card-title">COLEGIO VISITA LABORATORIOS DE QUÍMICA</h5>
                                     <p class="card-text">Un grupo de niños y niñas visitaron las instalaciones y laboratorios de química para jugar y aprender con activaciones educativas. Nuestros docentes participaron en los divertidos ejercicios que efectuaron los visitantes...</p>
@@ -103,10 +111,10 @@
                         </div>
                         <div class="col-md-4">
                             <div id="Ele1" class="card">
-                                <img src="\src\assets\img\noti8.jpg" class="card-img-top">
+                                <img :src="noti8" class="card-img-top" alt="Noticia 8">
                                 <div class="card-body">
                                     <h5 class="card-title">TITULACIÓN COLECTIVA DE INGENIERÍA QUÍMICA-BIOQUÍMICA</h5>
-                                    <p class="card-text">Hoy es un día especial para nuestra comunidad, pues celebramos la titulación colectiva de Ingeniería Química-Bioquímica en la sala audiovisual del edificio “D”. Este logro es el reflejo del esfuerzo, la dedicación y el compromiso...</p>
+                                    <p class="card-text">Hoy es un día especial para nuestra comunidad, pues celebramos la titulación colectiva de Ingeniería Química-Bioquímica en la sala audiovisual del edificio "D". Este logro es el reflejo del esfuerzo, la dedicación y el compromiso...</p>
                                 </div> 
                                 <div class="card-footer">
                                     <a href="#" class="btn-read-more">Leer más...</a>
@@ -115,7 +123,7 @@
                         </div>
                         <div class="col-md-4">
                             <div id="Ele1" class="card">
-                                <img src="\src\assets\img\noti9.jpg" class="card-img-top">
+                                <img :src="noti9" class="card-img-top" alt="Noticia 9">
                                 <div class="card-body">
                                     <h5 class="card-title">EXITOSO PANEL DEL DÍA INTERNACIONAL DE LA MUJER</h5>
                                     <p class="card-text">Las mujeres han logrado su crecimiento profesional y personal gracias a su esfuerzo y talento, coincidieron las ponentes en el panel ¨Desafíos y oportunidades para las mujeres en la academia¨. El panel celebrado ayer en...</p>
@@ -148,6 +156,8 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 .contenedor-carrusel {
     width: 83%;
@@ -288,5 +298,4 @@
 .carousel-control-next {
     display: none;
 }
-
 </style>

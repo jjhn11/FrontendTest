@@ -1,5 +1,5 @@
 <script setup>
-import HeroBiVideo from '@/components/HeroBiVideo.vue';
+import HeroBiVideo from '@/components/Library/HeroBiVideo.vue';
 import SearchBar from '@/components/SearchBar.vue';
 </script>
 

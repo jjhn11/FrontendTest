@@ -33,7 +33,7 @@
   </div>
 </template>
   
-<style>
+<style scoped>
 
 /* Hero Container */
 .hero-container {

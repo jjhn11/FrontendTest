@@ -1,9 +1,11 @@
 <script setup>
+import HeroBiVideo from '@/components/HeroBiVideo.vue';
 import SearchBar from '@/components/SearchBar.vue';
 </script>
 
 <template>
-    <br><br><br><br><br>
+    <HeroBiVideo />
+    <br><br>
     <SearchBar />
     <br><br>
 </template>

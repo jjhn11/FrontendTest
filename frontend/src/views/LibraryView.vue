@@ -6,29 +6,29 @@ import SearchBar from '@/components/SearchBar.vue';
 <template>
     <HeroBiVideo />
 
-    <br><br>
+    <br><br><br><br>
 
     <SearchBar />
 
-    <br><br>
+    <br><br><br><br>
 
-    <div class="container-fluid">
+    <div class="container">
         <h1 class="title">DESTACADO</h1>
-        <h2 class="subtitle ms-3">Conozca el contenido más popular</h2>
+        <h2 class="subtitle">Conozca el contenido más popular</h2>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br>
 
-    <div class="container-fluid">
+    <div class="container">
         <h1 class="title">NOVEDADES</h1>
-        <h2 class="subtitle ms-3">Lo nuevo en Aurora</h2>
+        <h2 class="subtitle">Lo nuevo en Aurora</h2>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br>
 
-    <div class="container mx-5 me-5">
+    <div class="container">
         <h1 class="title">CATEGORÍAS</h1>
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4 d-flex align-items-center justify-content-center mx-4 mt-4">
+        <div class="categories row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4 d-flex align-items-center justify-content-center">
             <div class="col text-center">
                 <div class="category-item">
                     <h2 class="category">Ciencias</h2>
@@ -100,9 +100,9 @@ import SearchBar from '@/components/SearchBar.vue';
             </p>
         </div>
         
-        <a href="" class="btn-access">
+        <RouterLink to="/library/book" class="btn-access">
             ACCEDER
-        </a>
+        </RouterLink>
     </div>
 
     <br><br><br><br><br><br><br>
@@ -126,8 +126,12 @@ import SearchBar from '@/components/SearchBar.vue';
     font-weight: 600;
     font-size: 25.5px;
     line-height: 100%;
+    margin: 15px 0 0 20px;
 }
 
+.categories {
+    margin: auto;
+}
 .category {
     font-family: Josefin Sans;
     color: #000E32;

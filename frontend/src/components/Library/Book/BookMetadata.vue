@@ -151,6 +151,7 @@
   
   .metadata-item {
     align-self: stretch;
+    text-align: left;
     padding: 5px;
     gap: 10px;
     font-family:
@@ -165,13 +166,14 @@
   
   .author-info,
   .publisher-info {
+    text-align: left;
     align-self: stretch;
     display: flex;
     width: 100%;
     padding: 5px;
     align-items: center;
     gap: 10px;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
   }
   
@@ -198,23 +200,13 @@
       sans-serif;
     align-self: stretch;
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: auto; 
   }
   
   @media (max-width: 991px) {
     .metadata-value {
       max-width: 100%;
     }
-  }
-  
-  .publisher-info {
-    display: flex;
-    margin-top: 5px;
-    padding: 5px;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
-    justify-content: center;
   }
   
   @media (max-width: 991px) {
@@ -298,7 +290,7 @@
       sans-serif;
     color: rgba(0, 71, 255, 1);
     white-space: nowrap;
-    justify-content: center;
+    justify-content: start;
   }
   
   @media (max-width: 991px) {

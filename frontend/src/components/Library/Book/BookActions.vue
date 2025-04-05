@@ -103,7 +103,7 @@
     border-color: rgba(0, 14, 50, 1);
     border-style: solid;
     border-width: 1px;
-    padding: 20px;
+    padding: 10px 20px 10px 20px;
     gap: 10px;
     color: rgba(255, 255, 255, 1);
     font-family:

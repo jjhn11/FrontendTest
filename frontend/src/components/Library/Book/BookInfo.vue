@@ -287,6 +287,7 @@
       Helvetica,
       sans-serif;
     align-self: stretch;
+    text-align: justify;
     margin-top: 9px;
   }
   

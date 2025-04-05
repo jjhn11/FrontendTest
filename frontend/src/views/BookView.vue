@@ -38,28 +38,18 @@
           <div class="progress-bar-blue"></div>
         </div> -->
       </main>
-      <!-- <Footer /> -->
+      <Footer2 />
     </div>
   </template>
   
-  <script>
+  <script setup>
   import Breadcrumb from "@/components/Library/Book/Breadcrumb.vue";
-  import BookInfo from "@/components/Library/Book/Bookinfo.vue";
+  import BookInfo from "@/components/Library/Book/BookInfo.vue";
   import BookActions from "@/components/Library/Book/BookActions.vue";
   import BookMetadata from "@/components/Library/Book/BookMetadata.vue";
 //   import BookReviews from "./BookReviews.vue";
 //   import RelatedBooks from "./RelatedBooks.vue";
-//   import Footer from "./Footer.vue";
-  
-  export default {
-    name: "BookDetail",
-    components: {
-      Breadcrumb,
-      BookInfo,
-      BookActions,
-      BookMetadata,
-    },
-  };
+  import Footer2 from "@/components/Library/Book/Footer2.vue";
   </script>
   
   <style scoped>

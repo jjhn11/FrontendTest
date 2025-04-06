@@ -1,7 +1,7 @@
 <script setup>
   // [Imports]
   import { RouterLink, useRoute } from 'vue-router';
-  import { ref } from 'vue'
+  import { ref, onMounted, onUnmounted } from 'vue'
   
   // [Imagenes]
   import logo from '../assets/img/LogoAurora.png';
@@ -14,84 +14,126 @@
   import E3E from '../assets/img/E3 ESCOLARES.png';
   import DDMV from '../assets/img/DDM VACIO.png';
 
-
   // [JavaScript]
 
-  // Función para verificar si un enlace está activo
+    // Función para verificar si un enlace está activo
 
-  const isActiveLink = (routePath) => {
-    const route = useRoute();
-    return route.path === routePath;
-  }
+    const isActiveLink = (routePath) => {
+      const route = useRoute();
+      return route.path === routePath;
+    }
 
-  // @@ Menu de Usuario @@
+    // @@@@@@@@@@@@@@@@@@@@@ Nav Bar @@@@@@@@@@@@@@@@@@@@@
 
-    // ## Datos reactivos para el menú de usuario ##
+        // Estado reactivo para controlar la visibilidad del Container Edu
+        const showEduContainer = ref(true);
+        
+        // Estado reactivo para controlar si la navbar está reducida
+        const isNavbarShrunk = ref(false);
 
-      const showMenu = ref(false) // Estado del menú de usuario
-      const currentView = ref('MainMenu') // Vista actual del menú
-      const viewStack = ref(['MainMenu']) // Pila de vistas para la navegación
+        // Función para manejar el evento de scroll
+        const handleScroll = () => {
+          showEduContainer.value = window.scrollY === 0; // Mostrar solo si el scroll está en la parte superior
+          isNavbarShrunk.value = window.scrollY > 0; // Reducir la navbar si el scroll es mayor a 0
+        };
 
-    // ## Funciones para manejar la navegación del menú ##
+        // Registrar y eliminar el evento de scroll
+        onMounted(() => {
+          window.addEventListener('scroll', handleScroll);
+        });
 
-      // Función para mostrar/ocultar el menú de usuario
+        onUnmounted(() => {
+          window.removeEventListener('scroll', handleScroll);
+        });
 
-      const toggleMenu = () => {
-        showMenu.value = !showMenu.value
-        if (showMenu.value) {
-          viewStack.value = ['MainMenu']
-          currentView.value = 'MainMenu'
+
+
+    // @@@@@@@@@@@@@@@@@@@@@ Menu de Usuario @@@@@@@@@@@@@@@@@@@@@
+
+      // ## Datos reactivos para el menú de usuario ##
+
+        const showMenu = ref(false) // Estado del menú de usuario
+        const currentView = ref('MainMenu') // Vista actual del menú
+        const viewStack = ref(['MainMenu']) // Pila de vistas para la navegación
+
+      // ## Funciones para manejar la navegación del menú ##
+
+        // Función para mostrar/ocultar el menú de usuario
+
+        const toggleMenu = () => {
+          showMenu.value = !showMenu.value
         }
-      }
 
-      // Función para navegar a una vista específica y agregarla a la pila de vistas
+        // Función para cerrar el menú
+        const closeMenu = () => {
+          showMenu.value = false;
+        };
+        
+        // Función para manejar clics fuera del formulario
+        const handleClickOutside = (event) => {
+          const form = document.getElementById('uform');
+          if (form && !form.contains(event.target)) {
+            closeMenu();
+          }
+        };
 
-      const navigateTo = (view) => {
-        viewStack.value.push(view)
-        currentView.value = view
-      }
+        // Registrar y eliminar el evento global de clic
+        onMounted(() => {
+          document.addEventListener('click', handleClickOutside);
+        });
 
-      // Función para regresar a la vista anterior (si hay más de una vista en la pila)
+        onUnmounted(() => {
+          document.removeEventListener('click', handleClickOutside);
+        });
 
-      const goBack = () => {
-        if (viewStack.value.length > 1) {
-          viewStack.value.pop()
-          currentView.value = viewStack.value[viewStack.value.length - 1]
+        // Función para navegar a una vista específica y agregarla a la pila de vistas
+
+        const navigateTo = (view) => {
+          viewStack.value.push(view)
+          currentView.value = view
         }
-      }
 
-      // ## Datos reactivos para las configuraciones ##
+        // Función para regresar a la vista anterior (si hay más de una vista en la pila)
 
-      const darkTheme = ref(false)
-      const currentFontSize = ref(1)
-      const fontSizes = [0.8, 1, 1.2]
-      const currentLanguage = ref('Español')
+        const goBack = () => {
+          if (viewStack.value.length > 1) {
+            viewStack.value.pop()
+            currentView.value = viewStack.value[viewStack.value.length - 1]
+          }
+        }
 
-    // ## Funciones para manejar las configuraciones ##
-    
-      // Cambia el tema entre claro y oscuro
+        // ## Datos reactivos para las configuraciones ##
 
-      const toggleTheme = () => {
-        darkTheme.value = !darkTheme.value
-        document.body.classList.toggle('dark-theme', darkTheme.value)
-      }
+        const darkTheme = ref(false)
+        const currentFontSize = ref(1)
+        const fontSizes = [0.8, 1, 1.2]
+        const currentLanguage = ref('Español')
 
-      // Cambia el tamaño de la fuente entre los valores definidos en fontSizes y actualiza el tamaño de fuente del documento
+      // ## Funciones para manejar las configuraciones ##
       
-      const changeFontSize = () => {
-        const currentIndex = fontSizes.indexOf(currentFontSize.value)
-        const nextIndex = (currentIndex + 1) % fontSizes.length
-        currentFontSize.value = fontSizes[nextIndex]
-        document.documentElement.style.fontSize = `${currentFontSize.value}rem`
-      }
+        // Cambia el tema entre claro y oscuro
 
-      // Cambia el idioma actual y actualiza la lógica de idioma (aquí se puede agregar la lógica para cambiar el idioma de la aplicación)
-      // En este caso, solo se actualiza el valor de currentLanguage
+        const toggleTheme = () => {
+          darkTheme.value = !darkTheme.value
+          document.body.classList.toggle('dark-theme', darkTheme.value)
+        }
 
-      const changeLanguage = (lang) => {
-        currentLanguage.value = lang
-        // Aquí iría la lógica para cambiar el idioma
-      }
+        // Cambia el tamaño de la fuente entre los valores definidos en fontSizes y actualiza el tamaño de fuente del documento
+        
+        const changeFontSize = () => {
+          const currentIndex = fontSizes.indexOf(currentFontSize.value)
+          const nextIndex = (currentIndex + 1) % fontSizes.length
+          currentFontSize.value = fontSizes[nextIndex]
+          document.documentElement.style.fontSize = `${currentFontSize.value}rem`
+        }
+
+        // Cambia el idioma actual y actualiza la lógica de idioma (aquí se puede agregar la lógica para cambiar el idioma de la aplicación)
+        // En este caso, solo se actualiza el valor de currentLanguage
+
+        const changeLanguage = (lang) => {
+          currentLanguage.value = lang
+          // Aquí iría la lógica para cambiar el idioma
+        }
 
   ///////////////////////////
 
@@ -101,27 +143,27 @@
   
   <!-- @@@@@@@@ Navbar @@@@@@@@ -->
 
-  <div class="container-fluid mt-5">
+  <div class="container-fluid p-3">
     
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top justify-content-center" :class="{ 'navbar-shrunk': isNavbarShrunk }">
       
-      <div class="col-12 mt-2">
+      <div class="col-12">
 
         <raw>
           
           <!-- CONTAINER EDU -->
-
-          <div class="container-fluid p-1 d-flex justify-content-center mb-1" id="edu">
-
-            <header>
-              <img :src="tec" width="525" height="70">
-            </header>
           
-          </div>
+            <div class="container-fluid p-1 mb-3 mt-2 d-flex justify-content-center mb-1" id="edu" :class="{ 'edu-shrunk': isNavbarShrunk }">
+
+              <header>
+                <img :src="tec" width="525" height="70">
+              </header>
+            
+            </div>
 
           <!-- CONTAINER NAVBAR -->
 
-          <div class="container-fluid p-2 justify-content-center">
+          <div class="container-fluid pb-3 justify-content-center">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -130,31 +172,31 @@
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
               
-              <a class="navbar-brand me-auto" id="aurlog">
+              <a class="navbar-brand me-auto" id="aurlog" :style="{ transform: isNavbarShrunk ? 'translateY(25px)' : 'translateY(0)' }">
                   <img :src="logo" width="130" height="50" id="log">
                   <span id="aur">AURORA</span>
               </a>
 
-              <ul class="navbar-nav border-top border-black border-2 d-flex justify-content-center" id="nav">
+              <ul class="navbar-nav border-top border-black border-2 d-flex justify-content-center" id="nav" :class="{ 'no-border': isNavbarShrunk }">
 
                 <li class="nav-item pe-5 mt-4 ms-3 me-5">
-                  <RouterLink to="/" class="nav-link" id="bot">
+                  <RouterLink to="/" class="nav-link" id="bot" :class="{ 'active-link': isActiveLink('/') }">
                     INICIO
                   </RouterLink>
                 </li>
 
                 <li class="nav-item dropdown position-static pe-5 mt-4 ms-5 me-4" id="droph">
-                  <RouterLink to="/" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="bot">
+                  <RouterLink to="/biblioteca" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/biblioteca') }">
                     BIBLIOTECA
                   </RouterLink>
 
-                  <ul class="dropdown-menu">
+                  <ul v-if="!isActiveLink('/biblioteca')" class="dropdown-menu">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                       <div class="row w-100 justify-content-center px-0">
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/biblioteca" class="dropdown-item" id="dropimg">
                             <img :src="B1N" width="300" height="175" id="log">
                             <span class="mt-3">NOVEDADES</span>
                           </RouterLink></li>
@@ -163,7 +205,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/biblioteca" class="dropdown-item" id="dropimg">
                             <img :src="B2R" width="300" height="175" id="log">
                             <span class="mt-3">RESEÑAS</span>
                           </RouterLink></li>
@@ -172,7 +214,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/biblioteca" class="dropdown-item" id="dropimg">
                             <img :src="B3C" width="300" height="175" id="log">
                             <span class="mt-3">CATALOGO</span>
                           </RouterLink></li>
@@ -186,17 +228,17 @@
                 </li>
 
                 <li class="nav-item dropdown position-static pe-5 mt-4 ms-5 me-4" id="droph">
-                  <RouterLink to="/" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="bot">
+                  <RouterLink to="/eventos" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/eventos') }">
                     EVENTOS
                   </RouterLink>
                   
-                  <ul class="dropdown-menu">
+                  <ul v-if="!isActiveLink('/eventos')" class="dropdown-menu">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                       <div class="row w-100 justify-content-center px-0">
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/eventos" class="dropdown-item" id="dropimg">
                             <img :src="E1C" width="300" height="175" id="log">
                             <span class="mt-3">CULTURALES</span>
                           </RouterLink></li>
@@ -205,7 +247,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/eventos" class="dropdown-item" id="dropimg">
                             <img :src="E2D" width="300" height="175" id="log">
                             <span class="mt-3">DEPORTIVOS</span>
                           </RouterLink></li>
@@ -214,7 +256,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/eventos" class="dropdown-item" id="dropimg">
                             <img :src="E3E" width="300" height="175" id="log">
                             <span class="mt-3">ESCOLARES</span>
                           </RouterLink></li>
@@ -228,17 +270,17 @@
                 </li>
 
                 <li class="nav-item dropdown position-static mt-4 ms-5 me-2" id="droph">
-                  <RouterLink to="/" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="bot">
+                  <RouterLink to="/comunidad" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/comunidad') }">
                     COMUNIDAD
                   </RouterLink>
 
-                  <ul class="dropdown-menu">
+                  <ul v-if="!isActiveLink('/comunidad')" class="dropdown-menu">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                       <div class="row w-100 justify-content-center px-0">
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/comunidad" class="dropdown-item" id="dropimg">
                             <img :src="DDMV" width="300" height="175" id="log">
                             <span class="mt-3">TABLEROS DE COMUNICACION</span>
                           </RouterLink></li>
@@ -247,7 +289,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/comunidad" class="dropdown-item" id="dropimg">
                             <img :src="DDMV" width="300" height="175" id="log">
                             <span class="mt-3">TABLEROS DE COMUNICACION</span>
                           </RouterLink></li>
@@ -256,7 +298,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/comunidad" class="dropdown-item" id="dropimg">
                             <img :src="DDMV" width="300" height="175" id="log">
                             <span class="mt-3">TABLEROS DE COMUNICACION</span>
                           </RouterLink></li>
@@ -270,7 +312,7 @@
                 </li>
               </ul>
               
-              <button @click="toggleMenu" type="button" class="btn btn-white mt-3 ms-auto me-5 justify-content-center" id="user"> 
+              <button @click.stop="toggleMenu" type="button" class="btn btn-white mt-3 ms-auto me-5 justify-content-center" id="user"> 
                 <i class="bi bi-person-circle"></i>
               </button>
 
@@ -288,17 +330,19 @@
 
   <!-- @@@@@@@@ Menu de Usuario @@@@@@@@ -->
 
-  <div class="container-fluid mt-5">
+  <div class="container-fluid p-3">
     
     <!-- Contenedor del menú -->
-    <form v-if="showMenu" class="bg-white border shadow mt-2 fixed-top" id="uform">
+    <form v-if="showMenu" class="bg-white border" id="uform" :class="{ 'form-shrunk': isNavbarShrunk }" @click.stop>
       <raw>
 
-        <div class="container-fluid p-1 justify-content-center">
-          <!-- Menú principal -->
+        <div class="container-fluid p-1 justify-content-center d-flex flex-column align-items-center">
+          
+          <!-- Menú Principal -->
+          
           <div v-if="currentView === 'MainMenu'">
 
-            <div class="mb-3">
+            <div class="mb-3 text-center">
               <label class="form-label bi bi-person-circle">
                 INVITADO
               </label>
@@ -324,16 +368,17 @@
 
           </div>
 
-          <!-- Menú de configuración -->
+          <!-- Menú de Configuración -->
+          
           <div v-if="currentView === 'ConfigMenu'">
 
-            <div class="mb-3">
+            <div class="mb-3 text-center">
               <label class="form-label">
                 CONFIGURACION
               </label>
             </div>
 
-            <div class="mb-3 justify-content-center">
+            <div class="mb-3">
               <button @click="navigateTo('PersonalizationMenu')" class="btn btn-outline-secondary">
                 PERSONALIZACION
               </button>
@@ -347,46 +392,48 @@
 
           </div>
 
-          <!-- Menú de personalización -->
+          <!-- Menú de Personalización -->
+          
           <div v-if="currentView === 'PersonalizationMenu'">
 
-            <div class="mb-3">
+            <div class="mb-3 text-center">
               <label class="form-label">
                 PERSONALIZACION
               </label>
             </div>
 
             <div class="mb-3">
-              <button @click="toggleTheme" class="btn btn-outline-secondary">
+              <button @click="toggleTheme" class="btn btn-outline-secondary" type="button">
                 {{ darkTheme ? 'PREDETERMINADO' : 'TEMA OSCURO' }}
               </button>
             </div>
 
             <div class="mb-3">
-              <button @click="changeFontSize"class="btn btn-outline-secondary">
+              <button @click="changeFontSize"class="btn btn-outline-secondary" type="button">
                 TAMAÑO: {{ currentFontSize }}rem
               </button>
             </div>
 
           </div>
 
-          <!-- Menú de idioma -->
+          <!-- Menú de Idioma -->
+          
           <div v-if="currentView === 'LanguageMenu'">
             
-            <div class="mb-3">
+            <div class="mb-3 text-center">
               <label class="form-label">
                 LENGUAJE
               </label>
             </div>
 
             <div class="mb-3">
-              <button @click="changeLanguage('Español')" class="btn btn-outline-secondary mb-2">
+              <button @click="changeLanguage('Español')" class="btn btn-outline-secondary mb-2" type="button">
                 ESPAÑOL
               </button>
             </div>
             
             <div class="mb-3">
-              <button @click="changeLanguage('English')" class="btn btn-outline-secondary">
+              <button @click="changeLanguage('English')" class="btn btn-outline-secondary" type="button">
                 ENGLISH
               </button>
             </div>
@@ -399,7 +446,7 @@
         <!-- Este botón solo se muestra si no estamos en el menú principal -->
 
         <div class="container-fluid">
-          <button v-if="currentView != 'MainMenu'" @click="goBack" class="btn btn-outline-danger" id="atbot">
+          <button v-if="currentView != 'MainMenu'" @click="goBack" class="btn btn-outline-danger" type="button" id="atbot">
             ←
           </button>
         </div>

@@ -9,38 +9,73 @@
 }
 
 .navbar {
-  background-color: $white;
+  padding-top: 0; /* Elimina padding adicional en la navbar */
+  margin-top: 0; /* Elimina márgenes adicionales */
+
+  background-color: white;
+
   font-family: 'Anek Odia';
   font-weight: $font-weight-bold;
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: all 0.5s ease;
 }
 
-/* ### Navbar row 1 (Up) ### */
+.navbar-shrunk {
+  transform: translateY(-100px); /* Sube la navbar hacia arriba */
+}
 
+.no-border {
+  border-top: none !important; /* Oculta la línea de border-top */
+  transition: border-top 0.5s ease; /* Transición suave para la línea */
+}
 
-/* ### Navbar row 2 (Down) ### */
+/* ########################### Navbar row 1 (Up) ########################### */
+
+  #edu {
+    transition: all 0.3s ease; /* Transición suave para altura y opacidad */
+  }
+
+  #edu.edu-shrunk {
+    opacity: 0; /* Desaparece visualmente */
+    overflow: hidden; /* Oculta el contenido cuando se reduce */
+  }
+
+/* ########################### Navbar row 2 (Down) ########################### */
 
   // Logo y Nombre
 
   #aurlog.navbar-brand {
+    margin-top: 0; /* Asegúrate de que no haya márgenes */
+    margin-bottom: 0; /* Asegúrate de que no haya márgenes */
+    padding-top: 0; /* Asegúrate de que no haya padding */
+    padding-bottom: 0; /* Asegúrate de que no haya padding */
+
     display: flex;
+
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
     position: relative;
     left: 100px;
-    bottom: 20px;
+    bottom: 20px; 
     margin-bottom: -15px;
+
+    transition: transform 0.3s ease;
   }
 
   #aurlog span {
     position: relative;
     bottom: 2px;
+
     font-family: 'Cinzel Decorative';
     font-size: 17px;
     font-weight: 600;
     color: #000E32;
     opacity: 0;
+
     transition: 0.6s;
     
   }
@@ -51,17 +86,24 @@
 
   // Botones
   
+  #nav {
+    transition: border-top 0.3s ease;
+  }
+  
   #nav li > a {
-    transition: 0.4s;
+    height: 40px;
+    background-color: white;
+
     font-family: 'Josefin Sans';
     font-size: 18px;
     font-weight: 700;
-    height: 40px;
     color: #000E32;
-    background-color: white;
+
+    transition: 0.4s;
   }
 
-  #nav li > #bot:hover {
+  #nav li > #bot:hover,
+  #nav li > #bot.active-link {
     color: white;
     background-color: #000E32;
     border-radius: 5px;
@@ -78,10 +120,12 @@
       left: 50% !important;
       transform: translateX(-50%) !important;
       right: auto !important;
+
       text-align: center; /* Para centrar el texto si lo deseas */
       min-width: 200px; /* Ancho mínimo */
       display: block;
       opacity: 0;
+
       transition: all 0.4s;
       transition-delay: 0s, 0s;
       pointer-events: none;
@@ -91,8 +135,11 @@
     #droph.dropdown:hover .dropdown-menu {
       transform: translateY(100px);
       margin-top: 10px;
+
       opacity: 1;
+
       transition-delay: 0s, 0s;
+
       pointer-events: initial;
     }
 
@@ -112,11 +159,13 @@
     position: relative;
     display: flex;
     align-items: center;
+
     width: 45px;
     height: 45px;
     right: 100px;
     top: 5px;
     border-radius: 80px;
+
     transition: all 0.6s;
 
     i {
@@ -138,36 +187,41 @@
 
   /* @@@@@@@@@@@@@@@@@ User Form Style @@@@@@@@@@@@@@@@@ */ 
 
-  #uform.fixed-top {
+  #uform {
     position: fixed;
-    top: 185px;
+    top: 190px;
     right: 0;
-    left: 0;
-    z-index: 1030;
-  }
+    z-index: 1029;
 
-  form#uform {
+    width: 300px; /* Ancho fijo */
+    max-width: 90%; /* Asegúrate de que no exceda el ancho de la pantalla */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align:center;
 
-    left: 75% !important;
-    transform: translateX(0%) !important;
-    right: auto !important;
-
-    width: 25%;
+    width: 300px;
     height: 300px;
     
     background-color: white;
     border: 2px solid black;
     border-bottom-left-radius: 25px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     
     font-family: 'Inria Sans';
     font-weight: 700;
 
+    transition: all 0.5s ease;
+
     label{
-      
+
+      white-space: normal; /* Permite que el texto se divida en varias líneas */
+      word-wrap: break-word; /* Divide palabras largas si es necesario */
+      text-align: center; /* Centra el texto dentro del label */
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -178,10 +232,10 @@
     }
 
     .btn {
-
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 0 auto; /* Centra los botones dentro del formulario */
 
       width: 200px;
       height: 45px;
@@ -202,4 +256,8 @@
 
       font-size: 22px;
     }
+  }
+
+  .form-shrunk {
+    transform: translateY(-100px); /* Sube la navbar hacia arriba */
   }

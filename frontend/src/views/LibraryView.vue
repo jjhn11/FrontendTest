@@ -1,4 +1,5 @@
 <script setup>
+import CarruselBiblioteca from '@/components/CarruselBiblioteca.vue';
 import HeroBiVideo from '@/components/Library/HeroBiVideo.vue';
 import SearchBar from '@/components/SearchBar.vue';
 </script>
@@ -15,6 +16,7 @@ import SearchBar from '@/components/SearchBar.vue';
     <div class="container">
         <h1 class="title">DESTACADO</h1>
         <h2 class="subtitle">Conozca el contenido más popular</h2>
+        <CarruselBiblioteca />
     </div>
 
     <br><br><br><br><br><br><br><br><br><br>
@@ -106,6 +108,7 @@ import SearchBar from '@/components/SearchBar.vue';
     </div>
 
     <br><br><br><br><br><br><br>
+    <br><br>
 </template>
 
 <style scoped>

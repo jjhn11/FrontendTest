@@ -14,6 +14,8 @@
   import E3E from '../assets/img/E3 ESCOLARES.png';
   import DDMV from '../assets/img/DDM VACIO.png';
 
+  import INV from '../assets/img/INVITADO.png';
+
   // [JavaScript]
 
     // Función para verificar si un enlace está activo
@@ -61,7 +63,7 @@
         // Función para mostrar/ocultar el menú de usuario
 
         const toggleMenu = () => {
-          showMenu.value = !showMenu.value
+          showMenu.value = !showMenu.value;
         }
 
         // Función para cerrar el menú
@@ -333,7 +335,7 @@
   <div class="container-fluid p-3">
     
     <!-- Contenedor del menú -->
-    <form v-if="showMenu" class="bg-white border" id="uform" :class="{ 'form-shrunk': isNavbarShrunk }" @click.stop>
+    <form class="bg-white border" id="uform" :class="{ 'form-shrunk': isNavbarShrunk, 'show': showMenu, 'hide': !showMenu }" @click.stop>
       <raw>
 
         <div class="container-fluid p-1 justify-content-center d-flex flex-column align-items-center">
@@ -341,29 +343,72 @@
           <!-- Menú Principal -->
           
           <div v-if="currentView === 'MainMenu'">
+            
+            <div class="container mt-3">
 
-            <div class="mb-3 text-center">
-              <label class="form-label bi bi-person-circle">
-                INVITADO
-              </label>
+              <div class="row">
+
+                <div class="col-4 mb-3 pe-4">
+                  <img :src="INV">
+                </div>
+
+                <div class="col-8 mb-3 ps-2">
+                  <label class="form-label">
+                    INVITADO
+                  </label>
+                </div>
+
+              </div>
+
+            </div>
+            
+            <div class="container mt-1">
+
+              <div class="row">
+
+                <div class="col-12 mb-3 ps-4">
+                  <RouterLink to="/" class="button-container btn" type="button" id="gen">
+                    <i class="button-icon fa-solid fa-circle-user"></i>
+
+                    <span class="button-text">INICIAR SESION</span>
+                  </RouterLink>
+                </div>
+
+              </div>
+
             </div>
 
-            <div class="mb-3">
-              <RouterLink to="/" class="btn btn-outline-primary">
-                INICIAR SESION
-              </RouterLink>
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-12 mb-3 ps-4">
+                  <RouterLink to="/"  class="button-container btn" type="button" id="gen">
+                    <i class="button-icon fa-solid fa-address-card"></i>
+
+                    <span class="button-text">CREAR CUENTA</span>
+                  </RouterLink>
+                </div>
+
+              </div>
+
             </div>
 
-            <div class="mb-3">
-              <RouterLink to="/"  class="btn btn-outline-primary">
-                CREAR CUENTA
-              </RouterLink>
-            </div>
+            <div class="container">
 
-            <div class="mb-3">
-              <button @click="navigateTo('ConfigMenu')" class="btn btn-outline-secondary">
-                CONFIGURACION
-              </button>
+              <div class="row">
+
+                <div class="col-12 mb-3 ps-4">
+                  <button @click="navigateTo('ConfigMenu')" class="button-container btn" type="button" id="gen">
+                  <i class="button-icon fa-solid fa-gear"></i>
+
+                  
+                  <span class="button-text">CONFIGURACION</span>
+                  </button>
+                </div>
+
+              </div>
+
             </div>
 
           </div>
@@ -372,10 +417,22 @@
           
           <div v-if="currentView === 'ConfigMenu'">
 
-            <div class="mb-3 text-center">
-              <label class="form-label">
-                CONFIGURACION
-              </label>
+            <div class="container mt-3">
+
+              <div class="row">
+
+                <div class="col-4 mb-3 pe-4">
+                  <img :src="INV">
+                </div>
+
+                <div class="col-8 mb-3 ps-2">
+                  <label class="form-label">
+                    INVITADO
+                  </label>
+                </div>
+
+              </div>
+
             </div>
 
             <div class="mb-3">

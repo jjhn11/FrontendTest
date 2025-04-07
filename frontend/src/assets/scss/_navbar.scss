@@ -193,7 +193,7 @@
     right: -330px;
     z-index: 1029;
 
-    width: 330px;
+    width: 350px;
     max-width: 90%; /* Asegúrate de que no exceda el ancho de la pantalla */
 
     height: 300px;
@@ -243,7 +243,7 @@
       height: 60px;
     }
 
-    label{
+    .form-menu-label{
 
       white-space: normal; /* Permite que el texto se divida en varias líneas */
       word-wrap: break-word; /* Divide palabras largas si es necesario */
@@ -257,53 +257,33 @@
       font-weight: 700;
 
     }
+    
+    // Label Icon
 
-    i {
+    i#labi {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
       text-align: center; /* Centra el texto dentro del label */
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      font-size: 30px;
+      font-size: 45px;
       font-weight: 700;
       color: #0047FF;
     }
 
-    /*
-    
-    #gen.btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto; // Centra los botones dentro del formulario
-
-      width: 185px;
-      height: 35px;
-      border-radius: 50px;
-
-      font-size: 16px;
-      font-weight: 700;
-
-      border-color: #0047FF;
-      color:#0047FF
+    i#theme {
+      &.bi-sun-fill {
+        color: #FBE326; // Color amarillo para el sol
+      }
+      
+      &.bi-moon-fill {
+        color: #000E32; // Color oscuro para la luna
+      }
     }
-
-    #gen.btn:hover {
-      background-color: #0047FF;
-      color: white;
-    }
-
-    .btn:hover + i {
-      color: #FBE326; ;
-    }
-
-    */
 
     .button-container {
       display: flex;
       align-items: center;
-      
       width: 100%;
       padding: 0;
       background: none;
@@ -330,8 +310,10 @@
       }
     
       .button-text {
-        flex-grow: 0.75;
-        padding: 0.5rem 1rem;
+        text-align: center;
+        width: 185px; // Ancho fijo para todos los botones
+        flex-grow: 0; // Quitar flex-grow para mantener el ancho fijo
+        padding: 0.25rem 1rem;
         border: 0.5px solid #0047FF;
         border-radius: 50px;
         transition: all 0.3s ease;
@@ -342,11 +324,31 @@
           border: 1px solid white;
           background-color: #FBE326;
           color: white;
+          
+          &.bright {
+            background-color: #FBE326;
+            color: white;
+          }
+
+          &.dark {
+            background-color: #000E32;
+            color: white;
+          }
         }
     
         .button-icon {
           color: #FBE326;
+
+          &.bi-brightness-high {
+            color: #FBE326;
+          }
+          
+          &.bi-moon {
+            color: #000E32;
+          }
         }
+
+        
       }
     }
 
@@ -360,5 +362,15 @@
       border-radius: 50px;
 
       font-size: 22px;
+
+      color: #bb1b1b;
+      background-color: white;
+      border-color: #bb1b1b;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: white;
+        background-color: #bb1b1b;
+      }
     }
   }

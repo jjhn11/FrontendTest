@@ -340,20 +340,22 @@
 
         <div class="container-fluid p-1 justify-content-center d-flex flex-column align-items-center">
           
-          <!-- Menú Principal -->
-          
+          <!-- ######################### Ventana Principal Sin Cuenta ######################### -->
+
           <div v-if="currentView === 'MainMenu'">
+
+            <!-- ------------------------------------------- -->
             
             <div class="container mt-3">
 
               <div class="row">
 
-                <div class="col-4 mb-3 pe-4">
+                <div class="col-4 mb-3 pe-4 d-flex justify-content-center align-items-center">
                   <img :src="INV">
                 </div>
 
-                <div class="col-8 mb-3 ps-2">
-                  <label class="form-label">
+                <div class="col-8 mb-3 ps-2 d-flex justify-content-center align-items-center">
+                  <label class="form-menu-label">
                     INVITADO
                   </label>
                 </div>
@@ -361,6 +363,8 @@
               </div>
 
             </div>
+
+            <!-- ------------------------------------------- -->
             
             <div class="container mt-1">
 
@@ -368,15 +372,20 @@
 
                 <div class="col-12 mb-3 ps-4">
                   <RouterLink to="/" class="button-container btn" type="button" id="gen">
-                    <i class="button-icon fa-solid fa-circle-user"></i>
 
-                    <span class="button-text">INICIAR SESION</span>
+                    <i class="button-icon fa-solid fa-circle-user"></i>
+                    <span class="button-text">
+                      INICIAR SESION
+                    </span>
+
                   </RouterLink>
                 </div>
 
               </div>
 
             </div>
+
+            <!-- ------------------------------------------- -->
 
             <div class="container">
 
@@ -384,9 +393,12 @@
 
                 <div class="col-12 mb-3 ps-4">
                   <RouterLink to="/"  class="button-container btn" type="button" id="gen">
-                    <i class="button-icon fa-solid fa-address-card"></i>
 
-                    <span class="button-text">CREAR CUENTA</span>
+                    <i class="button-icon fa-solid fa-address-card"></i>
+                    <span class="button-text">
+                      CREAR CUENTA
+                    </span>
+
                   </RouterLink>
                 </div>
 
@@ -394,16 +406,20 @@
 
             </div>
 
+            <!-- ------------------------------------------- -->
+
             <div class="container">
 
               <div class="row">
 
                 <div class="col-12 mb-3 ps-4">
                   <button @click="navigateTo('ConfigMenu')" class="button-container btn" type="button" id="gen">
-                  <i class="button-icon fa-solid fa-gear"></i>
 
-                  
-                  <span class="button-text">CONFIGURACION</span>
+                    <i class="button-icon fa-solid fa-gear"></i>
+                    <span class="button-text">
+                      CONFIGURACION
+                    </span>
+
                   </button>
                 </div>
 
@@ -411,23 +427,27 @@
 
             </div>
 
+            <!-- ------------------------------------------- -->
+
           </div>
 
-          <!-- Menú de Configuración -->
+          <!-- ######################### Ventana de Configuración ######################### -->
           
           <div v-if="currentView === 'ConfigMenu'">
 
-            <div class="container mt-3">
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
 
               <div class="row">
 
-                <div class="col-4 mb-3 pe-4">
-                  <img :src="INV">
+                <div class="col-3 mb-3 d-flex justify-content-center align-items-center">
+                  <i class="form-menu-label fa-solid fa-gear" id="labi"></i>
                 </div>
 
-                <div class="col-8 mb-3 ps-2">
-                  <label class="form-label">
-                    INVITADO
+                <div class="col-9 mb-3 pe-4 d-flex justify-content-center align-items-center">
+                  <label class="form-menu-label">
+                    CONFIGURACION
                   </label>
                 </div>
 
@@ -435,45 +455,123 @@
 
             </div>
 
-            <div class="mb-3">
-              <button @click="navigateTo('PersonalizationMenu')" class="btn btn-outline-secondary">
-                PERSONALIZACION
-              </button>
+            <!-- ------------------------------------------- -->
+
+            <div class="container mt-1">
+
+              <div class="row">
+
+                <div class="col-12 mb-3 ps-5">
+                  <button @click="navigateTo('PersonalizationMenu')" class="button-container btn" type="button" id="gen">
+
+                    <i class="button-icon bi bi-brush"></i>
+                    <span class="button-text">
+                      PERSONALIZACION
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
             </div>
 
-            <div class="mb-3">
-              <button @click="navigateTo('LanguageMenu')" class="btn btn-outline-secondary">
-                LENGUAJE
-              </button>
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-12 mb-3 ps-5 pb-2">
+                  <button @click="navigateTo('LanguageMenu')" class="button-container btn" type="button" id="gen">
+
+                    <i class="button-icon fa-solid fa-language"></i>
+                    <span class="button-text">
+                      LENGUAJE
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
             </div>
+
+            <!-- ------------------------------------------- -->
 
           </div>
 
-          <!-- Menú de Personalización -->
+          <!-- ######################### Ventana de Personalización ######################### -->
           
           <div v-if="currentView === 'PersonalizationMenu'">
 
-            <div class="mb-3 text-center">
-              <label class="form-label">
-                PERSONALIZACION
-              </label>
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-2 mb-3 d-flex justify-content-center align-items-center">
+                  <i class="form-menu-label bi bi-brush" id="labi"></i>
+                </div>
+
+                <div class="col-10 mb-3 ps-3 pe-4 d-flex justify-content-center align-items-center">
+                  <label class="form-menu-label">
+                    PERSONALIZACION
+                  </label>
+                </div>
+
+              </div>
+
             </div>
 
-            <div class="mb-3">
-              <button @click="toggleTheme" class="btn btn-outline-secondary" type="button">
-                {{ darkTheme ? 'PREDETERMINADO' : 'TEMA OSCURO' }}
-              </button>
+            <!-- ------------------------------------------- -->
+
+            <div class="container mt-1">
+
+              <div class="row">
+
+                <div class="col-12 mb-3 ps-5">
+                  <button @click="toggleTheme" class="button-container btn" type="button" id="gen">
+
+                    <i class="button-icon" :class="darkTheme ? 'bi bi-moon' : 'bi bi-brightness-high'" id="theme"></i>
+                    <span class="button-text" :class="darkTheme ? 'dark' : 'bright'">
+                      {{ darkTheme ? 'TEMA OSCURO' : 'TEMA CLARO' }}
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
             </div>
 
-            <div class="mb-3">
-              <button @click="changeFontSize"class="btn btn-outline-secondary" type="button">
-                TAMAÑO: {{ currentFontSize }}rem
-              </button>
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-12 mb-3 ps-5 pb-2">
+                  <button @click="changeFontSize" class="button-container btn" type="button" id="gen">
+
+                    <i class="button-icon fa-solid fa-text-height"></i>
+                    <span class="button-text">
+                      TAMAÑO: {{ currentFontSize }}rem
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
             </div>
 
+            <!-- ------------------------------------------- -->
+            
           </div>
 
-          <!-- Menú de Idioma -->
+          <!-- ######################### Ventana de Idioma ######################### -->
           
           <div v-if="currentView === 'LanguageMenu'">
             
@@ -499,12 +597,12 @@
 
         </div>
 
-        <!-- Botón de regreso al menú principal -->
+        <!-- ######################### Botón de regreso al menú principal ######################### -->
         <!-- Este botón solo se muestra si no estamos en el menú principal -->
 
         <div class="container-fluid">
           <button v-if="currentView != 'MainMenu'" @click="goBack" class="btn btn-outline-danger" type="button" id="atbot">
-            ←
+            <i class="fa-solid fa-chevron-left"></i>
           </button>
         </div>
 

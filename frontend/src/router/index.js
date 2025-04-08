@@ -1,38 +1,39 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import UserView from '../views/UserView.vue'
-import LibraryView from '@/views/LibraryView.vue'
-import BookView from '@/views/BookView.vue'
+import HomeView from '@/views/HomeView.vue'
+import Biblioteca from '@/views/Biblioteca.vue'
+import Eventos from '@/views/Eventos.vue'
+import Comunidad from '@/views/Comunidad.vue'
+
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'tasks',
+    component: HomeView,
   },
+
   {
-    path: '/user',
-    name: 'user',
-    component: UserView,
-  },
-  {
-    path: '/library',
+    path: '/biblioteca',
     name: 'library',
-    component: LibraryView,
+    component: Biblioteca,
   },
+
   {
-    path: '/library/book',
-    name: 'library-book',
-    component: BookView,
-  }
+    path: '/eventos',
+    name: 'events',
+    component: Eventos,
+  },
+
+  {
+    path: '/comunidad',
+    name: 'community',
+    component: Comunidad,
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory('/'),
-  routes,
-  scrollBehavior(to, from, savedPosition) {
-    return { top: 0 }
-  }
+  routes
 })
 
 export default router

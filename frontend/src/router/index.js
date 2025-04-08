@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import Biblioteca from '@/views/Biblioteca.vue'
 import Eventos from '@/views/Eventos.vue'
 import Comunidad from '@/views/Comunidad.vue'
 import UserView from '@/views/UserView.vue'
@@ -15,9 +14,9 @@ const routes = [
   },
 
   {
-    path: '/biblioteca',
+    path: '/library',
     name: 'library',
-    component: Biblioteca,
+    component: LibraryView,
   },
 
   {
@@ -35,11 +34,6 @@ const routes = [
     path: '/user',
     name: 'user',
     component: UserView,
-  },
-  {
-    path: '/library',
-    name: 'library',
-    component: LibraryView,
   },
   {
     path: '/library/book',

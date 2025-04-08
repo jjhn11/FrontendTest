@@ -217,6 +217,14 @@
     visibility: hidden;
     transition: all 0.5s ease; // Add right transition
 
+    &.nac-size {
+      height: 300px; // Altura para el menú principal 
+    }
+
+    &.ac-size {
+      height: 450px; // Altura más grande para MainMenuAc
+    }
+
     &.show {
       right: 0;
       opacity: 1;
@@ -239,8 +247,8 @@
       justify-content: center;
       align-items: center;
 
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
     }
 
     .form-menu-label{
@@ -257,6 +265,43 @@
       font-weight: 700;
 
     }
+
+    .form-ac-label{
+      white-space: normal; /* Permite que el texto se divida en varias líneas */
+      word-wrap: break-word; /* Divide palabras largas si es necesario */
+      text-align: left; /* Centra el texto dentro del label */
+      line-height: 1.0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .form-ac-sublabel {
+      white-space: normal; /* Permite que el texto se divida en varias líneas */
+      word-wrap: break-word; /* Divide palabras largas si es necesario */
+      text-align: left; /* Centra el texto dentro del label */
+      line-height: 1.0;
+
+      display: flex;
+      justify-content: left;
+      align-items: left;
+
+      font-size: 16px;
+      font-weight: 700;
+
+      &#est {
+        color:grey;
+      }
+
+      &#act {
+        color:#0047FF;
+      }
+    }
+    
     
     // Label Icon
 
@@ -281,8 +326,14 @@
       }
     }
 
+    i#cac{
+      opacity: 0;
+    }
+
     .button-container {
       display: flex;
+      justify-content: center;
+      align-content: center;
       align-items: center;
       width: 100%;
       padding: 0;
@@ -317,6 +368,38 @@
         border: 0.5px solid #0047FF;
         border-radius: 50px;
         transition: all 0.3s ease;
+
+        &#lbt {
+
+          width: 145px;;
+          padding: 0.25rem 1rem;
+        }
+      }
+
+      .button-ac-text {
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        text-align: left;
+        width: 185px; // Ancho fijo para todos los botones
+        flex-grow: 0; // Quitar flex-grow para mantener el ancho fijo
+        padding: 0.25rem 1rem;
+        border: 1px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+      }
+
+      .button-ac-icon {
+        width: 0px; // Ancho fijo para todos los íconos
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 25px;
+        color: #0047FF;
+        transition: all 0.3s ease;
+        margin-right: 2.1rem;
+        flex-shrink: 0;
       }
     
       &:hover {
@@ -336,7 +419,7 @@
           }
         }
     
-        .button-icon {
+        .button-icon, .button-ac-icon {
           color: #FBE326;
 
           &.bi-brightness-high {
@@ -349,6 +432,29 @@
         }
 
         
+      }
+    }
+
+    #csbot.btn {
+      margin-left: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+
+      border-radius: 50px;
+      border-color: #0047FF;
+
+      font-size: 16px;
+      font-weight: 700;
+      color: #0047FF;
+
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: white;
+        background-color: #FBE326;
+        color: white;
       }
     }
 

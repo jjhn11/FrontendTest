@@ -15,6 +15,7 @@
   import DDMV from '../assets/img/DDM VACIO.png';
 
   import INV from '../assets/img/INVITADO.png';
+  import ZEN from '../assets/img/ZENY PERFIL.png';
 
   // [JavaScript]
 
@@ -57,6 +58,7 @@
         const showMenu = ref(false) // Estado del menú de usuario
         const currentView = ref('MainMenu') // Vista actual del menú
         const viewStack = ref(['MainMenu']) // Pila de vistas para la navegación
+        const isAuthenticated = ref(false)
 
       // ## Funciones para manejar la navegación del menú ##
 
@@ -101,7 +103,24 @@
           if (viewStack.value.length > 1) {
             viewStack.value.pop()
             currentView.value = viewStack.value[viewStack.value.length - 1]
+          } else {
+            // Si solo queda una vista en la pila, volver a la vista principal según el estado de autenticación
+            currentView.value = isAuthenticated.value ? 'MainMenuAc' : 'MainMenu'
+            viewStack.value = [currentView.value]
           }
+        }
+
+        // Agrega estas nuevas funciones para manejar el inicio y cierre de sesión
+        const handleLogin = () => {
+          isAuthenticated.value = true
+          currentView.value = 'MainMenuAc'
+          viewStack.value = ['MainMenuAc'] // Resetea la pila de vistas
+        }
+
+        const handleLogout = () => {
+          isAuthenticated.value = false
+          currentView.value = 'MainMenu'
+          viewStack.value = ['MainMenu'] // Resetea la pila de vistas
         }
 
         // ## Datos reactivos para las configuraciones ##
@@ -335,7 +354,12 @@
   <div class="container-fluid p-3">
     
     <!-- Contenedor del menú -->
-    <form class="bg-white border" id="uform" :class="{ 'form-shrunk': isNavbarShrunk, 'show': showMenu, 'hide': !showMenu }" @click.stop>
+    <form class="bg-white border" id="uform"  :class="{'form-shrunk': isNavbarShrunk,
+                                                        'show': showMenu, 
+                                                        'hide': !showMenu
+                                                      }, currentView === 'MainMenuAc' ? 'ac-size' : 'nac-size'" 
+    @click.stop>
+
       <raw>
 
         <div class="container-fluid p-1 justify-content-center d-flex flex-column align-items-center">
@@ -371,14 +395,14 @@
               <div class="row">
 
                 <div class="col-12 mb-3 ps-4">
-                  <RouterLink to="/" class="button-container btn" type="button" id="gen">
+                  <button @click="handleLogin" class="button-container btn" type="button">
 
                     <i class="button-icon fa-solid fa-circle-user"></i>
                     <span class="button-text">
                       INICIAR SESION
                     </span>
 
-                  </RouterLink>
+                  </button>
                 </div>
 
               </div>
@@ -392,7 +416,7 @@
               <div class="row">
 
                 <div class="col-12 mb-3 ps-4">
-                  <RouterLink to="/"  class="button-container btn" type="button" id="gen">
+                  <RouterLink to="/"  class="button-container btn" type="button">
 
                     <i class="button-icon fa-solid fa-address-card"></i>
                     <span class="button-text">
@@ -413,7 +437,7 @@
               <div class="row">
 
                 <div class="col-12 mb-3 ps-4">
-                  <button @click="navigateTo('ConfigMenu')" class="button-container btn" type="button" id="gen">
+                  <button @click="navigateTo('ConfigMenu')" class="button-container btn" type="button">
 
                     <i class="button-icon fa-solid fa-gear"></i>
                     <span class="button-text">
@@ -428,8 +452,187 @@
             </div>
 
             <!-- ------------------------------------------- -->
-
+          
           </div>
+
+          <!-- ######################### Ventana Principal Con Cuenta ######################### -->
+
+          <div v-if="currentView === 'MainMenuAc'">
+
+            <!-- ------------------------------------------- -->
+            
+            <div class="container mt-3">
+
+              <div class="row">
+
+                <div class="col-5 mb-3 d-flex justify-content-center align-items-center">
+                  <img :src="ZEN">
+                </div>
+
+                <div class="col-7 mb-3 ps-1 d-flex justify-content-center align-items-center">
+                  <raw>
+                    <label class="form-ac-label">
+                      SOTELO JIMENEZ ZENY GABRIELA
+                    </label>
+                    <label class="form-ac-sublabel" id="est">
+                      ESTATUS
+                    </label>
+                    <label class="form-ac-sublabel" id="act">
+                      ACTIVO
+                    </label>
+                  </raw>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ------------------------------------------- -->
+            
+            <div class="container mt-1">
+
+              <div class="row">
+
+                <div class="col-9 mb-2 ps-5 ms-5">
+                  <RouterLink to="/" class="button-container btn" type="button">
+
+                    <i class="button-ac-icon fa-solid fa-user-gear"></i>
+                    <span class="button-ac-text">
+                      PERFIL
+                    </span>
+
+                  </RouterLink>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-9 mb-2 ps-5 ms-5">
+                  <button class="button-container btn" type="button">
+
+                    <i class="button-ac-icon fa-solid fa-hand-holding-hand"></i>
+                    <span class="button-ac-text">
+                      SERVICIOS
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-9 mb-2 ps-5 ms-5">
+                  <button class="button-container btn" type="button">
+
+                    <i class="button-ac-icon fa-solid fa-clock-rotate-left"></i>
+                    <span class="button-ac-text">
+                      HISTORIAL
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-9 mb-2 ps-5 ms-5">
+                  <button class="button-container btn" type="button">
+
+                    <i class="button-ac-icon fa-solid fa-wallet"></i>
+                    <span class="button-ac-text">
+                      ADEUDOS
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-9 mb-2 ps-5 ms-5">
+                  <button class="button-container btn" type="button">
+
+                    <i class="button-ac-icon fa-solid fa-heart"></i>
+                    <span class="button-ac-text">
+                      FAVORITOS
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-9 mb-3 ps-5 ms-5">
+                  <button @click="navigateTo('ConfigMenu')" class="button-container btn" type="button">
+
+                    <i class="button-ac-icon fa-solid fa-gear"></i>
+                    <span class="button-ac-text">
+                      CONFIGURACION
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-12 mb-3 ps-5 ms-3">
+                  <button @click="handleLogout" class="btn btn-white" type="button" id="csbot">
+                      CERRAR SESION
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ------------------------------------------- -->
+          
+          </div>
+
 
           <!-- ######################### Ventana de Configuración ######################### -->
           
@@ -445,7 +648,7 @@
                   <i class="form-menu-label fa-solid fa-gear" id="labi"></i>
                 </div>
 
-                <div class="col-9 mb-3 pe-4 d-flex justify-content-center align-items-center">
+                <div class="col-8 mb-3 pe-4 d-flex justify-content-center align-items-center">
                   <label class="form-menu-label">
                     CONFIGURACION
                   </label>
@@ -461,8 +664,8 @@
 
               <div class="row">
 
-                <div class="col-12 mb-3 ps-5">
-                  <button @click="navigateTo('PersonalizationMenu')" class="button-container btn" type="button" id="gen">
+                <div class="col-11 mb-3 ps-5">
+                  <button @click="navigateTo('PersonalizationMenu')" class="button-container btn" type="button">
 
                     <i class="button-icon bi bi-brush"></i>
                     <span class="button-text">
@@ -482,8 +685,8 @@
 
               <div class="row">
 
-                <div class="col-12 mb-3 ps-5 pb-2">
-                  <button @click="navigateTo('LanguageMenu')" class="button-container btn" type="button" id="gen">
+                <div class="col-11 mb-3 ps-5 pb-2">
+                  <button @click="navigateTo('LanguageMenu')" class="button-container btn" type="button">
 
                     <i class="button-icon fa-solid fa-language"></i>
                     <span class="button-text">
@@ -531,8 +734,8 @@
 
               <div class="row">
 
-                <div class="col-12 mb-3 ps-5">
-                  <button @click="toggleTheme" class="button-container btn" type="button" id="gen">
+                <div class="col-11 mb-3 ps-5">
+                  <button @click="toggleTheme" class="button-container btn" type="button">
 
                     <i class="button-icon" :class="darkTheme ? 'bi bi-moon' : 'bi bi-brightness-high'" id="theme"></i>
                     <span class="button-text" :class="darkTheme ? 'dark' : 'bright'">
@@ -552,8 +755,8 @@
 
               <div class="row">
 
-                <div class="col-12 mb-3 ps-5 pb-2">
-                  <button @click="changeFontSize" class="button-container btn" type="button" id="gen">
+                <div class="col-11 mb-3 ps-5 pb-2">
+                  <button @click="changeFontSize" class="button-container btn" type="button">
 
                     <i class="button-icon fa-solid fa-text-height"></i>
                     <span class="button-text">
@@ -575,23 +778,69 @@
           
           <div v-if="currentView === 'LanguageMenu'">
             
-            <div class="mb-3 text-center">
-              <label class="form-label">
-                LENGUAJE
-              </label>
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-4 mb-3 d-flex justify-content-center align-items-center">
+                  <i class="form-menu-label fa-solid fa-language" id="labi"></i>
+                </div>
+
+                <div class="col-7 mb-3 ps-3 pe-4 d-flex justify-content-center align-items-center">
+                  <label class="form-menu-label">
+                    LENGUAJE
+                  </label>
+                </div>
+
+              </div>
+
             </div>
 
-            <div class="mb-3">
-              <button @click="changeLanguage('Español')" class="btn btn-outline-secondary mb-2" type="button">
-                ESPAÑOL
-              </button>
+            <!-- ------------------------------------------- -->
+
+            <div class="container mt-1">
+
+              <div class="row">
+
+                <div class="col-11 mb-3 ps-4 ms-1">
+                  <button @click="changeLanguage('Español')"  class="button-container btn" type="button">
+
+                    <i class="button-icon fi fi-mx"></i>
+                    <span class="button-text">
+                      ESPAÑOL
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
             </div>
-            
-            <div class="mb-3">
-              <button @click="changeLanguage('English')" class="btn btn-outline-secondary" type="button">
-                ENGLISH
-              </button>
+
+            <!-- ------------------------------------------- -->
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-11 mb-3 ps-4 ms-1 pb-2">
+                  <button @click="changeLanguage('English')" class="button-container btn" type="button">
+
+                    <i class="button-icon fa-solid fi fi-us"></i>
+                    <span class="button-text">
+                      ENGLISH
+                    </span>
+
+                  </button>
+                </div>
+
+              </div>
+
             </div>
+
+            <!-- ------------------------------------------- -->
 
           </div>
 
@@ -601,7 +850,7 @@
         <!-- Este botón solo se muestra si no estamos en el menú principal -->
 
         <div class="container-fluid">
-          <button v-if="currentView != 'MainMenu'" @click="goBack" class="btn btn-outline-danger" type="button" id="atbot">
+          <button v-if="currentView !== 'MainMenu' && currentView !== 'MainMenuAc'" @click="goBack" class="btn btn-outline-danger" type="button" id="atbot">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
         </div>

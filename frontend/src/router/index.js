@@ -5,7 +5,6 @@ import Eventos from '@/views/Eventos.vue'
 import Comunidad from '@/views/Comunidad.vue'
 
 
-
 const routes = [
   {
     path: '/',
@@ -29,13 +28,7 @@ const routes = [
     path: '/comunidad',
     name: 'community',
     component: Comunidad,
-
   },
-  {
-    path: '/user',
-    name: 'user',
-    component: UserView,
-  }
 ]
 
 const router = createRouter({

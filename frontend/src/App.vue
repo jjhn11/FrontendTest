@@ -7,7 +7,6 @@ import { RouterView } from 'vue-router';
 <template>
   <div id="app">
     <Navbar />
-    <Carrusel />
     <RouterView />
     <Foot />
   </div>
@@ -19,6 +18,4 @@ import { RouterView } from 'vue-router';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-</style>
-<style>
 </style>

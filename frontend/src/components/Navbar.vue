@@ -209,6 +209,9 @@
                 <li class="nav-item dropdown position-static pe-5 mt-4 ms-5 me-4" id="droph">
                   <RouterLink to="/biblioteca" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/biblioteca') }">
                     BIBLIOTECA
+                    <div data-bs-toggle="dropdown" aria-expanded="false">
+
+                    </div>
                   </RouterLink>
 
                   <ul v-if="!isActiveLink('/biblioteca')" class="dropdown-menu">

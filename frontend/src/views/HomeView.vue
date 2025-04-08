@@ -1,9 +1,9 @@
 <script setup>
-import HeroVideo from '@/components/HeroVideo.vue';
+import HeroVideo from '@/components/Home/HeroVideo.vue';
 import SearchBar from '@/components/SearchBar.vue';
-import Carrusel from '@/components/Carrusel.vue';
-import Title from '@/components/Title.vue';
-import CarruselEventos from '@/components/CarruselEventos.vue';
+import Carrusel from '@/components/Home/Carrusel.vue';
+import Title from '@/components/Home/Title.vue';
+import CarruselEventos from '@/components/Home/CarruselEventos.vue';
 </script>
 
 <template>

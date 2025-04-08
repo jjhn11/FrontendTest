@@ -1,12 +1,35 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import UserView from '../views/UserView.vue'
+import HomeView from '@/views/HomeView.vue'
+import Biblioteca from '@/views/Biblioteca.vue'
+import Eventos from '@/views/Eventos.vue'
+import Comunidad from '@/views/Comunidad.vue'
+
+
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'tasks',
+    component: HomeView,
+  },
+
+  {
+    path: '/biblioteca',
+    name: 'library',
+    component: Biblioteca,
+  },
+
+  {
+    path: '/eventos',
+    name: 'events',
+    component: Eventos,
+  },
+
+  {
+    path: '/comunidad',
+    name: 'community',
+    component: Comunidad,
+
   },
   {
     path: '/user',

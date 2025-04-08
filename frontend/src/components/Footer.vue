@@ -7,10 +7,10 @@
                     <h1 class="footer-title">
                         ENLACES UTILES
                     </h1>
-                    <RouterLink to="/" class="footer-text text-link">INICIO</RouterLink>
-                    <RouterLink to="/biblioteca" class="footer-text text-link">BIBLIOTECA</RouterLink>
-                    <RouterLink to="/eventos" class="footer-text text-link">EVENTOS</RouterLink>
-                    <RouterLink to="/comunidad" class="footer-text text-link">COMUNIDAD</RouterLink>
+                    <a href="" class="footer-text text-link">INICIO</a>
+                    <a href="" class="footer-text text-link">BIBLIOTECA</a>
+                    <a href="" class="footer-text text-link">EVENTOS</a>
+                    <a href="" class="footer-text text-link">COMUNIDAD</a>
                 </div>
             </div>
             <div class="col-3">

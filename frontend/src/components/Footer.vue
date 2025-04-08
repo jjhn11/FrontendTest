@@ -1,5 +1,5 @@
 <template>
-    <img src="../assets/img/tec-map.png" alt="Mapa del TecNM" class="img-fluid">
+    <img src="@/assets/img/footer/tec-map.png" alt="Mapa del TecNM" class="img-fluid">
     <footer class="footer">
         <div class="row">
             <div class="col-4 d-flex justify-content-center">
@@ -7,10 +7,10 @@
                     <h1 class="footer-title">
                         ENLACES UTILES
                     </h1>
-                    <RouterLink to="/" class="footer-text text-link">INICIO</RouterLink>
-                    <RouterLink to="/biblioteca" class="footer-text text-link">BIBLIOTECA</RouterLink>
-                    <RouterLink to="/eventos" class="footer-text text-link">EVENTOS</RouterLink>
-                    <RouterLink to="/comunidad" class="footer-text text-link">COMUNIDAD</RouterLink>
+                    <a href="" class="footer-text text-link">INICIO</a>
+                    <a href="" class="footer-text text-link">BIBLIOTECA</a>
+                    <a href="" class="footer-text text-link">EVENTOS</a>
+                    <a href="" class="footer-text text-link">COMUNIDAD</a>
                 </div>
             </div>
             <div class="col-3">
@@ -43,16 +43,16 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <div class="col-3">
-                            <img src="../assets/img/fb.png" class="img fb" alt="">
+                            <img src="@/assets/img/footer/fb.png" class="img fb" alt="">
                         </div>
                         <div class="col-3">
-                            <img src="../assets/img/insta.png" class="img ig" alt="">
+                            <img src="@/assets/img/footer/insta.png" class="img ig" alt="">
                         </div>
                         <div class="col-3">
-                            <img src="../assets/img/youtube.png" class="img yt" alt="">
+                            <img src="@/assets/img/footer/youtube.png" class="img yt" alt="">
                         </div>
                         <div class="col-3">
-                            <img src="../assets/img/school-sharp.png" class="img schoolar" alt="">
+                            <img src="@/assets/img/footer/school-sharp.png" class="img schoolar" alt="">
                         </div>
                     
                     </div>

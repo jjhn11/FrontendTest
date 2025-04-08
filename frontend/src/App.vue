@@ -19,3 +19,5 @@ import { RouterView } from 'vue-router';
   -moz-osx-font-smoothing: grayscale;
 }
 </style>
+<style>
+</style>

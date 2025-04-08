@@ -7,6 +7,8 @@ import store from './store'
 
 // Import Bootstrap CSS and JS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+// Icons
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 createApp(App).use(store).use(router).mount('#app')

@@ -1,17 +1,17 @@
 <script setup>
   import { RouterLink, useRoute } from 'vue-router';
-  import logo from '../assets/img/LogoAurora.png';
-  import tec from '../assets/img/tec.png';
+  import logo from '../assets/img/navbar/LogoAurora.png';
+  import tec from '../assets/img/navbar/tec.png';
 
-  import B1N from '../assets/img/B1 NOVEDADES.png';
-  import B2R from '../assets/img/B2 RESEÑAS.png';
-  import B3C from '../assets/img/B3 CATALOGO.png';
+  import B1N from '../assets/img/navbar/B1 NOVEDADES.png';
+  import B2R from '../assets/img/navbar/B2 RESEÑAS.png';
+  import B3C from '../assets/img/navbar/B3 CATALOGO.png';
 
-  import E1C from '../assets/img/E1 CULTURALES.png';
-  import E2D from '../assets/img/E2 DEPORTIVOS.png';
-  import E3E from '../assets/img/E3 ESCOLARES.png';
+  import E1C from '../assets/img/navbar/E1 CULTURALES.png';
+  import E2D from '../assets/img/navbar/E2 DEPORTIVOS.png';
+  import E3E from '../assets/img/navbar/E3 ESCOLARES.png';
   
-  import DDMV from '../assets/img/DDM VACIO.png';
+  import DDMV from '../assets/img/navbar/DDM VACIO.png';
 
   const isActiveLink = (routePath) => {
     const route = useRoute();
@@ -68,8 +68,11 @@
                 </li>
 
                 <li class="nav-item dropdown position-static pe-5 mt-4 ms-5 me-4" id="droph">
-                  <RouterLink to="/" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="bot">
+                  <RouterLink to="/library" class="nav-link" role="button" id="bot">
                     BIBLIOTECA
+                    <div data-bs-toggle="dropdown" aria-expanded="false">
+
+                    </div>
                   </RouterLink>
 
                   <ul class="dropdown-menu">

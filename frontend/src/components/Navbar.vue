@@ -169,8 +169,11 @@
     
     <nav class="navbar navbar-expand-lg navbar-light fixed-top justify-content-center" :class="{ 'navbar-shrunk': isNavbarShrunk }">
 
+      
       <div class="col-12">
 
+        <raw>
+          
           <!-- CONTAINER EDU -->
           
             <div class="container-fluid p-1 mb-3 mt-2 d-flex justify-content-center mb-1" id="edu" :class="{ 'edu-shrunk': isNavbarShrunk }">
@@ -354,22 +357,33 @@
                             <span class="mt-3">TABLEROS DE COMUNICACION</span>
                           </RouterLink></li>
 
-            </div>
+                        </div>
 
-            <div class="col-12 col-md-4 py-4">
+                        <div class="col-12 col-md-4 py-4">
 
-              <li><RouterLink to="/" class="dropdown-item" id="dropimg">
-                <img :src="DDMV" width="300" height="175" id="log">
-                <span class="mt-3">TABLEROS DE COMUNICACION</span>
-              </RouterLink></li>
+                          <li><RouterLink to="/" class="dropdown-item" id="dropimg">
+                            <img :src="DDMV" width="300" height="175" id="log">
+                            <span class="mt-3">TABLEROS DE COMUNICACION</span>
+                          </RouterLink></li>
 
-            </div>
+                        </div>
                         
-          </div>
+                      </div>
+                    </div>
+                  </ul>
+                  
+                </li>
+              </ul>
               
               <RouterLink to="/user" type="button" class="btn btn-white mx-5 mt-3 ms-auto me-5 justify-content-center" id="user"> 
                 <i class="bi bi-person-circle"></i>
               </RouterLink>
+              
+            </div>
+
+          </div>
+    
+        </raw>
 
       </div>
 

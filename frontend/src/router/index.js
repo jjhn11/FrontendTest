@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import Eventos from '@/views/Eventos.vue'
-import Comunidad from '@/views/Comunidad.vue'
+import EventsView from '@/views/EventsView.vue'
+import CommunityView from '@/views/CommunityView.vue'
 import UserView from '@/views/UserView.vue'
 import LibraryView from '@/views/LibraryView.vue'
 import BookView from '@/views/BookView.vue'
@@ -20,15 +20,15 @@ const routes = [
   },
 
   {
-    path: '/eventos',
+    path: '/events',
     name: 'events',
-    component: Eventos,
+    component: EventsView,
   },
 
   {
-    path: '/comunidad',
+    path: '/community',
     name: 'community',
-    component: Comunidad,
+    component: CommunityView,
   },
   {
     path: '/user',

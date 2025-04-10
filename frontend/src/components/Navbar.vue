@@ -14,8 +14,8 @@
   import E3E from '../assets/img/navbar/E3 ESCOLARES.png';
   import DDMV from '../assets/img/navbar/DDM VACIO.png';
 
-  import INV from '../assets/img/INVITADO.png';
-  import ZEN from '../assets/img/ZENY PERFIL.png';
+  import INV from '../assets/img/navbar/INVITADO.png';
+  import ZEN from '../assets/img/navbar/ZENY PERFIL.png';
 
   // [JavaScript]
 

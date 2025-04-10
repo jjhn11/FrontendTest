@@ -27,19 +27,19 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-sm-6 col-md-4">
                             <BookCard
-                               cover-image="\src\assets\img\LibroBigData.png"
+                               cover-image="src\assets\img\library\LibroBigData.png"
                                title="Big data: La Revolución de los Datos Masivos"
                                description="Computación"/>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4">
                                 <BookCard
-                                cover-image="\src\assets\img\LibroFisicoquimica.png"
+                                cover-image="src\assets\img\library\LibroFisicoquimica.png"
                                 title="Fisicoquimica"
                                 description="Fisicoquimica"/>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4">
                             <BookCard
-                                cover-image="\src\assets\img\LibroMarxismo.jpg"
+                                cover-image="src\assets\img\library\LibroMarxismo.jpg"
                                 title="Ciencias Sociales y Marxismo"
                                 description="Ciencias sociales"/>
                         </div>
@@ -49,19 +49,19 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-sm-6 col-md-4">
                             <BookCard
-                               cover-image="\src\assets\img\LibroPsicologia.jpg"
+                               cover-image="src\assets\img\library\LibroPsicologia.jpg"
                                title="Psicología social"
                                description="Psicología"/>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4">
                             <BookCard
-                               cover-image="\src\assets\img\LibroBigData.png"
+                               cover-image="src\assets\img\library\LibroBigData.png"
                                title="Big data: La Revolución de los Datos Masivos"
                                description="Computación"/>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4">
                             <BookCard
-                               cover-image="\src\assets\img\LibroBigData.png"
+                               cover-image="src\assets\img\library\LibroBigData.png"
                                title="Big data: La Revolución de los Datos Masivos"
                                description="Computación"/>
                         </div>
@@ -71,19 +71,19 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-sm-6 col-md-4">
                             <BookCard
-                               cover-image="\src\assets\img\LibroBigData.png"
+                               cover-image="src\assets\img\library\LibroBigData.png"
                                title="Big data: La Revolución de los Datos Masivos"
                                description="Computación"/>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4">
                             <BookCard
-                               cover-image="\src\assets\img\LibroBigData.png"
+                               cover-image="src\assets\img\library\LibroBigData.png"
                                title="Big data: La Revolución de los Datos Masivos"
                                description="Computación"/>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4">
                             <BookCard
-                               cover-image="\src\assets\img\LibroBigData.png"
+                               cover-image="src\assets\img\library\LibroBigData.png"
                                title="Big data: La Revolución de los Datos Masivos"
                                description="Computación"/>
                         </div>

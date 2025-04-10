@@ -5,6 +5,7 @@
 </style>
 <template>
     <div class="book-card">
+      <RouterLink to="/library/book" class="book-link">
         <div class="book-cover">
             <img :src="coverImage" :alt="title" class="book-image" />
         </div>
@@ -12,6 +13,7 @@
             <h3 class="book-title">{{ title }}</h3>
             <p class="book-description">{{ description }}</p>
         </div>
+      </RouterLink>
     </div>
 </template>
 

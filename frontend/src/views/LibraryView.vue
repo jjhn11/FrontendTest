@@ -1,5 +1,5 @@
 <script setup>
-import CarruselBiblioteca from '@/components/CarruselBiblioteca.vue';
+import CarruselBiblioteca from '@/components/Library/CarruselBiblioteca.vue';
 import HeroBiVideo from '@/components/Library/HeroBiVideo.vue';
 import SearchBar from '@/components/SearchBar.vue';
 </script>

@@ -5,7 +5,7 @@
         <div class="profile-details">
             <div class="row d-flex align-items-center mb-4">
                 <div class="col-4 profile-image">
-                    <img src="../assets/img/zeny.jpg" alt="Profile Picture" />
+                    <img src="@/assets/img/user/zeny.jpg" alt="Profile Picture" />
                 </div>
                 <div class="col-8 ">
                     <h2 class="profile-name">ZOTELO JIMENEZ ZENY GABRIELA</h2>

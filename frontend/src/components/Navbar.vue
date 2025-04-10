@@ -497,7 +497,7 @@
               <div class="row">
 
                 <div class="col-9 mb-2 ps-5 ms-5">
-                  <RouterLink to="/" class="button-container btn" type="button">
+                  <RouterLink to="/user" class="button-container btn" type="button">
 
                     <i class="button-ac-icon fa-solid fa-user-gear"></i>
                     <span class="button-ac-text">

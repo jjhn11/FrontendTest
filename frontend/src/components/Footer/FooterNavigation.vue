@@ -4,23 +4,23 @@
         <h3 class="footer-nav__title">EXPLORAR</h3>
         <ul class="footer-nav__links">
           <li>
-            <a href="#" class="footer-nav__link footer-nav__link--inicio"
-              >INICIO</a
+            <RouterLink to="/" class="footer-nav__link footer-nav__link--inicio"
+              >INICIO</RouterLink
             >
           </li>
           <li>
-            <a href="#" class="footer-nav__link footer-nav__link--biblioteca"
-              >BIBLIOTECA</a
+            <RouterLink to="/library" class="footer-nav__link footer-nav__link--biblioteca"
+              >BIBLIOTECA</RouterLink
             >
           </li>
           <li>
-            <a href="#" class="footer-nav__link footer-nav__link--eventos"
-              >EVENTOS</a
+            <RouterLink to="/events" class="footer-nav__link footer-nav__link--eventos"
+              >EVENTOS</RouterLink
             >
           </li>
           <li>
-            <a href="#" class="footer-nav__link footer-nav__link--comunidad"
-              >COMUNIDAD</a
+            <RouterLink to="/community" class="footer-nav__link footer-nav__link--comunidad"
+              >COMUNIDAD</RouterLink
             >
           </li>
         </ul>

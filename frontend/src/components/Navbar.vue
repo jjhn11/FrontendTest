@@ -292,7 +292,7 @@
                 </li>
 
                 <li class="nav-item dropdown position-static mt-4 ms-5 me-2" id="droph">
-                  <RouterLink to="/community" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/comunidad') }">
+                  <RouterLink to="/community" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/community') }">
                     COMUNIDAD
                   </RouterLink>
 
@@ -493,7 +493,7 @@
               <div class="row">
 
                 <div class="col-9 mb-2 ps-5 ms-5">
-                  <RouterLink to="/user" class="button-container btn" type="button">
+                  <RouterLink to="/user/profile" class="button-container btn" type="button">
 
                     <i class="button-ac-icon fa-solid fa-user-gear"></i>
                     <span class="button-ac-text">

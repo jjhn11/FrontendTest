@@ -2,9 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import EventsView from '@/views/EventsView.vue'
 import CommunityView from '@/views/CommunityView.vue'
-import UserView from '@/views/UserView.vue'
-import LibraryView from '@/views/LibraryView.vue'
-import BookView from '@/views/BookView.vue'
+import ProfileView from '@/views/User/ProfileView.vue'
+import LibraryView from '@/views/Library/LibraryView.vue'
+import BookView from '@/views/Library/BookView.vue'
 
 const routes = [
   {
@@ -31,9 +31,9 @@ const routes = [
     component: CommunityView,
   },
   {
-    path: '/user',
-    name: 'user',
-    component: UserView,
+    path: '/user/profile',
+    name: 'profile',
+    component: ProfileView,
   },
   {
     path: '/library/book',

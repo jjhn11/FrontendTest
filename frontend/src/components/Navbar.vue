@@ -169,9 +169,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top justify-content-center" :class="{ 'navbar-shrunk': isNavbarShrunk }">
       
       <div class="col-12">
-
-        <raw>
-          
+  
           <!-- CONTAINER EDU -->
           
             <div class="container-fluid p-1 mb-3 mt-2 d-flex justify-content-center mb-1" id="edu" :class="{ 'edu-shrunk': isNavbarShrunk }">
@@ -207,20 +205,20 @@
                 </li>
 
                 <li class="nav-item dropdown position-static pe-5 mt-4 ms-5 me-4" id="droph">
-                  <RouterLink to="/library" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/biblioteca') }">
+                  <RouterLink to="/library" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/library') }">
                     BIBLIOTECA
                     <div data-bs-toggle="dropdown" aria-expanded="false">
 
                     </div>
                   </RouterLink>
 
-                  <ul v-if="!isActiveLink('/biblioteca')" class="dropdown-menu">
+                  <ul v-if="!isActiveLink('/library')" class="dropdown-menu">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                       <div class="row w-100 justify-content-center px-0">
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/biblioteca" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/library" class="dropdown-item" id="dropimg">
                             <img :src="B1N" width="300" height="175" id="log">
                             <span class="mt-3">NOVEDADES</span>
                           </RouterLink></li>
@@ -229,7 +227,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/biblioteca" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/library" class="dropdown-item" id="dropimg">
                             <img :src="B2R" width="300" height="175" id="log">
                             <span class="mt-3">RESEÑAS</span>
                           </RouterLink></li>
@@ -238,7 +236,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/biblioteca" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/library" class="dropdown-item" id="dropimg">
                             <img :src="B3C" width="300" height="175" id="log">
                             <span class="mt-3">CATALOGO</span>
                           </RouterLink></li>
@@ -252,17 +250,17 @@
                 </li>
 
                 <li class="nav-item dropdown position-static pe-5 mt-4 ms-5 me-4" id="droph">
-                  <RouterLink to="/eventos" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/eventos') }">
+                  <RouterLink to="/events" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/events') }">
                     EVENTOS
                   </RouterLink>
                   
-                  <ul v-if="!isActiveLink('/eventos')" class="dropdown-menu">
+                  <ul v-if="!isActiveLink('/events')" class="dropdown-menu">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                       <div class="row w-100 justify-content-center px-0">
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/eventos" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/events" class="dropdown-item" id="dropimg">
                             <img :src="E1C" width="300" height="175" id="log">
                             <span class="mt-3">CULTURALES</span>
                           </RouterLink></li>
@@ -271,7 +269,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/eventos" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/events" class="dropdown-item" id="dropimg">
                             <img :src="E2D" width="300" height="175" id="log">
                             <span class="mt-3">DEPORTIVOS</span>
                           </RouterLink></li>
@@ -280,7 +278,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/eventos" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/events" class="dropdown-item" id="dropimg">
                             <img :src="E3E" width="300" height="175" id="log">
                             <span class="mt-3">ESCOLARES</span>
                           </RouterLink></li>
@@ -294,17 +292,17 @@
                 </li>
 
                 <li class="nav-item dropdown position-static mt-4 ms-5 me-2" id="droph">
-                  <RouterLink to="/comunidad" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/comunidad') }">
+                  <RouterLink to="/community" class="nav-link" role="button" aria-expanded="false" id="bot" :class="{ 'active-link': isActiveLink('/comunidad') }">
                     COMUNIDAD
                   </RouterLink>
 
-                  <ul v-if="!isActiveLink('/comunidad')" class="dropdown-menu">
+                  <ul v-if="!isActiveLink('/community')" class="dropdown-menu">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                       <div class="row w-100 justify-content-center px-0">
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/comunidad" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/community" class="dropdown-item" id="dropimg">
                             <img :src="DDMV" width="300" height="175" id="log">
                             <span class="mt-3">TABLEROS DE COMUNICACION</span>
                           </RouterLink></li>
@@ -313,7 +311,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/comunidad" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/community" class="dropdown-item" id="dropimg">
                             <img :src="DDMV" width="300" height="175" id="log">
                             <span class="mt-3">TABLEROS DE COMUNICACION</span>
                           </RouterLink></li>
@@ -322,7 +320,7 @@
 
                         <div class="col-12 col-md-4 py-4">
 
-                          <li><RouterLink to="/comunidad" class="dropdown-item" id="dropimg">
+                          <li><RouterLink to="/community" class="dropdown-item" id="dropimg">
                             <img :src="DDMV" width="300" height="175" id="log">
                             <span class="mt-3">TABLEROS DE COMUNICACION</span>
                           </RouterLink></li>
@@ -344,8 +342,6 @@
 
           </div>
     
-        </raw>
-
       </div>
 
     </nav>

@@ -3,6 +3,7 @@ import HomeView from '@/views/HomeView.vue'
 import EventsView from '@/views/EventsView.vue'
 import CommunityView from '@/views/CommunityView.vue'
 import ProfileView from '@/views/User/ProfileView.vue'
+import DebtsView from '@/views/User/DebtsView.vue'
 import LibraryView from '@/views/Library/LibraryView.vue'
 import BookView from '@/views/Library/BookView.vue'
 
@@ -30,11 +31,19 @@ const routes = [
     name: 'community',
     component: CommunityView,
   },
+  
   {
     path: '/user/profile',
     name: 'profile',
     component: ProfileView,
   },
+
+  {
+    path: '/user/debts',
+    name: 'debts',
+    component: DebtsView,
+  },
+
   {
     path: '/library/book',
     name: 'library-book',

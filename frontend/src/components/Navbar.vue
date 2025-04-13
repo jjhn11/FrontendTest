@@ -556,14 +556,14 @@
               <div class="row">
 
                 <div class="col-9 mb-2 ps-5 ms-5">
-                  <button class="button-container btn" type="button">
+                  <RouterLink to="/user/debts" class="button-container btn" type="button">
 
                     <i class="button-ac-icon fa-solid fa-wallet"></i>
                     <span class="button-ac-text">
                       ADEUDOS
                     </span>
 
-                  </button>
+                  </RouterLink>
                 </div>
 
               </div>
